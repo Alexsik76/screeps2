@@ -199,7 +199,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
                roleDoctor.run(creep);
            }
         if(creep.memory.role == 'ranger') {
-            roleAttacker1.run(creep);
+            roleRanger.run(creep);
         }
         if(creep.memory.role == 'invader') {
             roleInvader.run(creep);
