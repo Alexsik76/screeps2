@@ -43,6 +43,7 @@ var roleAttacker1 = {
               creep.moveTo(enemies);
                 if(creep.pos.isNearTo(enemies)) {
                   creep.attack(enemies);
+                  creep.rangedMassAttack();
                 } else {
                   creep.rangedAttack(enemies);
                 }
