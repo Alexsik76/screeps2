@@ -212,8 +212,11 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
           }
         }
         if(creep.memory.role == 'builder') {
-
+          if(closestDamagedStructure){
             roleBuilder.run(creep);
+          }else {
+            roleHarvester2.run(creep);
+          }
         }
 
 
