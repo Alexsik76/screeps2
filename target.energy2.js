@@ -16,7 +16,7 @@ function TargetEnergy2(creep){
      creep.moveTo(creep.room.storage);
    }
  }
- if(!storage && !containers){
+ if(!storage && containers.length == 0){
    console.log('1111');
    var sources = creep.room.find(FIND_SOURCES);
      if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
