@@ -22,7 +22,7 @@ var roleBuilder = {
           var roomSearch = Game.rooms[n];
           console.log('Game.rooms[n] = ' + Game.rooms[n].name);
 
-          var targets = roomSearch.find(FIND_CONSTRUCTION_SITES);
+          var targets = roomSearch.find(FIND_CONSTRUCTION_SITES).name;
           if(!creep.memory.targets){
           creep.memory.targets = targets;
           } else {
@@ -32,8 +32,9 @@ var roleBuilder = {
         console.log('Builder creep.memory.target =  ' + creep.memory.targets);
           //var targets = creep.room.find(FIND_CONSTRUCTION_SITES);
         if(creep.memory.targets.length) {
-          if(creep.build(creep.memory.targets[0]) == ERR_NOT_IN_RANGE) {
-            rUn(creep, creep.memory.targets[0]);
+          var target = Game.getObjectById(creep.memory.targets[0]);
+          if(creep.build(target) == ERR_NOT_IN_RANGE) {
+            rUn(creep, target);
           }
         }
 	    } else {
