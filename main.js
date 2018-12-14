@@ -140,7 +140,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
           ATTACK,RANGED_ATTACK,ATTACK,ATTACK,ATTACK,RANGED_ATTACK,RANGED_ATTACK], newName,{memory: {role: 'attacker1'}});
       }
     }
-    if(attackers.length > 3 && !defendRoom(Memory.roomName)){
+    if(attackers.length > 4 && !defendRoom(Memory.roomName)){
     Memory.invasion = true;
     }
     if (attackers.length < 0){
@@ -149,7 +149,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
 //   Memory.invasion = true;
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
   console.log('Invaders: ' + invaders.length);
-  if(readyToInvasion < 4  && Memory.readyToInvasion1){
+  if(readyToInvasion < 2  && Memory.readyToInvasion1){
     if(invaders.length < 0){
       var newName = 'Invader' + Game.time;
       console.log('Spawning new invader: ' + newName);
