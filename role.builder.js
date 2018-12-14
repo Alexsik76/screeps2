@@ -29,7 +29,7 @@ var roleBuilder = {
             creep.memory.targets[0] = null;
           }
         } else {
-          creep.memory.targets = null;
+          //creep.memory.targets = null;
           for(var n in Game.rooms){
           var roomSearch = Game.rooms[n];
           console.log('Game.rooms[n] = ' + Game.rooms[n].name);
