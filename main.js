@@ -1,4 +1,3 @@
-//require('version');
 var number = 0;
 var roleHarvester = require('role.harvester');
 var roleUpgrader = require('role.upgrader');
@@ -39,19 +38,19 @@ if(miners.length < Memory.containers.length && Memory.energyAv > 549) {
 
     var harvesters = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester');
     console.log('Harvesters: ' + harvesters.length);
-    var needHarvesters = Memory.container.store[RESOURCE_ENERGY] > 1500 ? 4 : 2;
-    console.log('needHarvesters  ' + needHarvesters);
-    if(harvesters.length < needHarvesters) {
+
+
+    if(harvesters.length < 2) {
       readyToInvasion += 1;
       console.log('Ready To Invasion ' + Memory.readyToInvasion);
         console.log(Game.spawns['Spawn1'].energy);
-        if(Memory.energyAv > 450 && Memory.harvesting == false)
+        if(Memory.energyAv > 500 && Memory.harvesting == false)
         {
         var newName = 'HarvesterBig' + Game.time;
-        console.log('Spawning new harvester: ' + newName);
+        console.log('Spawning new harvesterBig + newName);
 
-        Game.spawns['Spawn1'].spawnCreep([CARRY,CARRY,CARRY,MOVE,MOVE,MOVE], newName,
-            {memory: {role: 'harvester'}})
+        Game.spawns['Spawn1'].spawnCreep([CARRY,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE,MOVE], newName,
+            {memory: {role: 'harvester'}});
         } else {
         var newName = 'Harvester' + Game.time;
         console.log('Spawning new harvester: ' + newName);
