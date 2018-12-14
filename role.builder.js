@@ -22,8 +22,9 @@ var roleBuilder = {
           console.log('Game.rooms[n] = ' + Game.rooms[n].name);
           var targets = roomSearch.find(FIND_CONSTRUCTION_SITES);
           creep.memory.targets = targets.slice();
-          console.log('Builder creep.memory.target =  ' + creep.memory.target);
+
         }
+        console.log('Builder creep.memory.target =  ' + creep.memory.targets);
           //var targets = creep.room.find(FIND_CONSTRUCTION_SITES);
         if(creep.memory.targets.length) {
           if(creep.build(creep.memory.targets[0]) == ERR_NOT_IN_RANGE) {
