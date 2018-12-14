@@ -47,7 +47,7 @@ if(miners.length < Memory.containers.length && Memory.energyAv > 549) {
         if(Memory.energyAv > 500 && Memory.harvesting == false)
         {
         var newName = 'HarvesterBig' + Game.time;
-        console.log('Spawning new harvesterBig + newName);
+        console.log('Spawning new harvesterBig' + newName);
 
         Game.spawns['Spawn1'].spawnCreep([CARRY,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE,MOVE], newName,
             {memory: {role: 'harvester'}});
