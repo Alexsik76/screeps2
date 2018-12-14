@@ -50,7 +50,7 @@ var roleBuilder = {
 	    } else {
             if(creep.carry.energy < creep.carryCapacity) {
 
-              TargetEnergy(creep);
+              TargetEnergy2(creep);
             }
         }
 
