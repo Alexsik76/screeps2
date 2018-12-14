@@ -181,7 +181,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
             roleUpgrader.run(creep);
         }
         if(creep.memory.role == 'upgrader2') {
-            roleUpgrader2.run(creep);
+            roleUpgrader.run(creep);
         }
         if(creep.memory.role == 'miner0') {
             roleMiner0.run(creep);
