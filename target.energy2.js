@@ -16,6 +16,7 @@ function TargetEnergy2(creep){
      creep.moveTo(creep.room.storage);
    }
  }
+ console.log(!storage && containers.length == 0);
  if(!storage && containers.length == 0){
    console.log('1111');
    var sources = creep.room.find(FIND_SOURCES);
