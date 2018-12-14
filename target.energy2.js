@@ -3,10 +3,10 @@ function TargetEnergy2(creep){
 
 
  //if(!creep.memmory.target){
- var sources = creep.room.storage;
- if(!sources){
+ var storage = creep.room.storage;
+ if(!storage){
    console.log('0000');
-   var sources = creep.room.find(FIND_STRUCTURES, {
+   var containers = creep.room.find(FIND_STRUCTURES, {
                              filter: (structure) => {
                              return (structure.structureType == STRUCTURE_CONTAINER)
                              }
@@ -16,16 +16,16 @@ function TargetEnergy2(creep){
      creep.moveTo(creep.room.storage);
    }
  }
- if(!sources){
+ if(!storage && !containers){
    console.log('1111');
    var sources = creep.room.find(FIND_SOURCES);
      if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
        creep.moveTo(sources[0], {visualizePathStyle: {stroke: '#ffaa00'}});
      }
  } else {
-   console.log('2222' + sources[0].structureType);
-   if(creep.withdraw(sources[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-     creep.moveTo(sources[0]);
+   console.log('2222' + containers[0].structureType);
+   if(creep.withdraw(containers[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+     creep.moveTo(containers[0]);
    }
  }
 
