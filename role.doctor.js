@@ -25,7 +25,7 @@ var roleDoctor= {
                     var pos3333 =  new RoomPosition(44, 28, Memory.roomName);
                     creep.moveTo(pos3333);
                 } else{
-            var pos3333 =  new RoomPosition(22, 22, 'E11N46');
+            var pos3333 =  new RoomPosition(19, 9, 'E11N46');
             creep.moveTo(pos3333);
           }
         if(target == null){
