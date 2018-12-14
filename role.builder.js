@@ -43,11 +43,13 @@ var roleBuilder = {
             rUn(creep, target);
           }
           if(creep.build(target) == ERR_INVALID_TARGET){
+            creep.say('stop');
             creep.memory.targets[0] = null;
           }
         }
 	    } else {
             if(creep.carry.energy < creep.carryCapacity) {
+
               TargetEnergy(creep);
             }
         }
