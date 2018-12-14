@@ -9,7 +9,7 @@ function TargetTransport4(creep){
                           && structure.energy < structure.energyCapacity;
               }
           });
-    return target;
+    return target.id;
 }
 
 
