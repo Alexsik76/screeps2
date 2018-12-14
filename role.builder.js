@@ -6,7 +6,7 @@ var roleBuilder = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
-creep.memory.targets = null;
+//creep.memory.targets = null;
       if(creep.memory.building && creep.carry.energy == 0) {
         creep.memory.building = false;
         creep.say('🔄 harvest');
