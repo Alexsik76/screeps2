@@ -17,8 +17,20 @@ var roleBuilder = {
 	    }
 
 	    if(creep.memory.building) {
-        //creep.memory.targets = null;
-        for(var n in Game.rooms){
+
+
+
+        if(creep.memory.targets.length) {
+          var target = Game.getObjectById(creep.memory.targets[0]);
+          if(creep.build(target) == ERR_NOT_IN_RANGE) {
+            rUn(creep, target);
+          }
+          if(creep.build(target) == ERR_INVALID_TARGET){
+            creep.memory.targets[0] = null;
+          }
+        } else {
+          creep.memory.targets = null;
+          for(var n in Game.rooms){
           var roomSearch = Game.rooms[n];
           console.log('Game.rooms[n] = ' + Game.rooms[n].name);
 
@@ -31,11 +43,7 @@ var roleBuilder = {
         }
         console.log('Builder creep.memory.target =  ' + creep.memory.targets);
           //var targets = creep.room.find(FIND_CONSTRUCTION_SITES);
-        if(creep.memory.targets.length) {
-          var target = Game.getObjectById(creep.memory.targets[0]);
-          if(creep.build(target) == ERR_NOT_IN_RANGE) {
-            rUn(creep, target);
-          }
+
         }
 	    } else {
             if(creep.carry.energy < creep.carryCapacity) {
