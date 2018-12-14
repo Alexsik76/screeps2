@@ -21,12 +21,14 @@ var roleBuilder = {
         if(!creep.memory.targets) {
           //creep.memory.targets = null;
           for(var n in Game.rooms){
-          var roomSearch = Game.rooms[n];
+          var roomSearch = Game.rooms[n].name;
           console.log('Game.rooms[n] = ' + Game.rooms[n].name);
 
-          var targets = roomSearch.find(FIND_CONSTRUCTION_SITES).name;
+          var targets = roomSearch.find(FIND_CONSTRUCTION_SITES);
           if(!creep.memory.targets){
-          creep.memory.targets = targets;
+          creep.memory.targets = targets.map(function(name) {
+              return name.id
+          });
           console.log(targets);
           } else {
           creep.memory.targets = creep.memory.targets.concat(targets);
