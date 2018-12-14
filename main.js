@@ -212,17 +212,10 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
           }
         }
         if(creep.memory.role == 'builder') {
-            if (Game.rooms[Memory.roomName].find(FIND_CONSTRUCTION_SITES).length > 0) {
-            roleBuilder.run(creep);
-            } else {
-              if(harvesters.length < 2 || Memory.energyAv < 500){
-                roleHarvester.run(creep);
-              }else {
-                  roleUpgrader.run(creep);
-              }
 
-            }
+            roleBuilder.run(creep);
         }
+      }
 
     }
 
