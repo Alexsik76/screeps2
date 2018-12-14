@@ -18,7 +18,9 @@ var roleBuilder = {
 
 	    if(creep.memory.building) {
         //towers.forEach(tower => tower.repair(targetStructure[0]));
-        var targets1 = Game.rooms.forEach(room => room.find(FIND_CONSTRUCTION_SITES));
+        var rooms = Game.rooms;
+        console.log(rooms);
+        var targets1 = rooms.forEach(room => room.find(FIND_CONSTRUCTION_SITES));
         console.log('Targets to build: ' + targets1);
 //        console.log('creep.memory.targets' + (creep.memory.targets));
         if(!creep.memory.targets) {
