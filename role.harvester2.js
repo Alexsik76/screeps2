@@ -1,5 +1,5 @@
 var rUn = require('run1');
-var TargetTransport3 = require('target.transport3');
+var TargetTransport4 = require('target.transport4');
 var roleHarvester2 = {
 
     /** @param {Creep} creep **/
