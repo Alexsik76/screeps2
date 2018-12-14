@@ -146,6 +146,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
   } else {
     Memory.invasion = false;
   }
+  Memory.invasion = true;
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
   console.log('Invaders: ' + invaders.length);
   if(readyToInvasion < 4  && Memory.readyToInvasion1){
