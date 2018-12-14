@@ -20,7 +20,7 @@ var roleBuilder = {
 
 
 
-        if(creep.memory.targets.length) {
+        if(creep.memory.targets) {
           var target = Game.getObjectById(creep.memory.targets[0]);
           if(creep.build(target) == ERR_NOT_IN_RANGE) {
             rUn(creep, target);
