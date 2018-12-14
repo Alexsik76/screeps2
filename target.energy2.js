@@ -23,7 +23,7 @@ function TargetEnergy2(creep){
        creep.moveTo(sources[0], {visualizePathStyle: {stroke: '#ffaa00'}});
      }
  } else {
-   console.log('2222');
+   console.log('2222' + sources[0].structureType);
    if(creep.withdraw(sources[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
      creep.moveTo(sources[0]);
    }
