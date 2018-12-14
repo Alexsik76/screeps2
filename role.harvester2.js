@@ -12,7 +12,7 @@ var roleHarvester2 = {
     creep.say('🔄 withdraw');
   }
   if(creep.carry.energy > 0 && !creep.memory.transport){
-    creep.memory.targeten = TargetTransport3(creep);
+    creep.memory.targeten = TargetTransport4(creep);
     //creep.say('SToop');
     if(!creep.memory.targeten){
       //console.log('Stoop  ' + creep.name);
