@@ -27,6 +27,7 @@ var roleBuilder = {
           var targets = roomSearch.find(FIND_CONSTRUCTION_SITES).name;
           if(!creep.memory.targets){
           creep.memory.targets = targets;
+          console.log(targets);
           } else {
           creep.memory.targets = creep.memory.targets.concat(targets);
           }
