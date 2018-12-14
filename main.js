@@ -142,9 +142,10 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
     }
     if(attackers.length > 6 && !defendRoom(Memory.roomName)){
     Memory.invasion = true;
-  } else {
+    }
+    if (attackers.length < 1){
     Memory.invasion = false;
-  }
+    }
 //   Memory.invasion = true;
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
   console.log('Invaders: ' + invaders.length);
