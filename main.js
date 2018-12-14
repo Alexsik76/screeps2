@@ -215,7 +215,8 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
 
             roleBuilder.run(creep);
         }
-      }
+      
+
 
     }
 
