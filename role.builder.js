@@ -1,7 +1,7 @@
 var rUn = require('run1');
 var definition = require('definition');
 var renew = require('renew');
-var TargetEnergy = require('target.energy');
+var TargetEnergy2 = require('target.energy2');
 var roleBuilder = {
 
     /** @param {Creep} creep **/

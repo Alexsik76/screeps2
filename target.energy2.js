@@ -1,5 +1,5 @@
 var rUn = require('run1');
-function TargetEnergy(creep){
+function TargetEnergy2(creep){
 
 
  //if(!creep.memmory.target){
@@ -25,7 +25,7 @@ function TargetEnergy(creep){
      creep.moveTo(sources[0]);
    }
  }
- 
+
       }
 
-module.exports = TargetEnergy;
+module.exports = TargetEnergy2;
