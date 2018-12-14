@@ -111,7 +111,7 @@ console.log('Not energy for spawn harvester');
     var builders = _.filter(Game.creeps, (creep) => creep.memory.role == 'builder');
     var targets = Game.rooms[Memory.roomName].find(FIND_CONSTRUCTION_SITES).length;
     console.log('Builder: ' + builders.length);
-    if(builders.length < 4 && targets > 0){
+    if(builders.length < 1 && targets > 0){
       readyToInvasion += 1;
       if(Memory.energyAv > 449) {
         var newName = 'BuilderBig' + Game.time;
