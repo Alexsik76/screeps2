@@ -49,7 +49,7 @@ Memory.containerId = cont0.store[RESOURCE_ENERGY] < cont1.store[RESOURCE_ENERGY]
           Memory.harvesting = false;
       }
     }
-    if(Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY] > 300000
+    if(Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY] > 100000
       && !defendRoom(Memory.roomName) && Memory.energyAv > 600){
       Memory.readyToInvasion1 = true;
     } else {
