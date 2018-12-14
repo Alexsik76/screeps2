@@ -65,7 +65,7 @@ console.log('Not energy for spawn harvester');
           readyToInvasion += 1;
         var newName = 'HarvesterWar' + Game.time;
         console.log('Spawning new harvesterWar: ' + newName);
-        Game.spawns['Spawn1'].spawnCreep([CARRY,CARRY,MOVE,MOVE,CARRY,CARRY,MOVE,MOVE], newName,
+        Game.spawns['Spawn1'].spawnCreep([CARRY,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE,MOVE], newName,
             {memory: {role: 'harvester2'}})
         }
     var upgraders = _.filter(Game.creeps, (creep) => creep.memory.role == 'upgrader');
