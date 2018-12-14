@@ -19,7 +19,7 @@ var roleBuilder = {
 	    if(creep.memory.building) {
         for(var n in Game.rooms){
           var roomSearch = Game.rooms[n];
-          targets[n] = roomSearch.find(FIND_CONSTRUCTION_SITES);
+          var targets[n] = roomSearch.find(FIND_CONSTRUCTION_SITES);
           creep.memory.targets = creep.memory.target.concat(targets[n]);
           //console.log('Builder creep.memory.target =  ' + creep.memory.target);
         }
