@@ -41,6 +41,7 @@ var roleDoctor= {
           creep.moveTo(target);
             if(creep.pos.isNearTo(target)) {
               creep.heal(target);
+              
             }
             else {
               creep.rangedHeal(target);
