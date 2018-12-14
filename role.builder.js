@@ -19,13 +19,14 @@ var roleBuilder = {
 	    if(creep.memory.building) {
         for(var n in Game.rooms){
           var roomSearch = Game.rooms[n];
-          creep.memory.target = roomSearch.find(FIND_CONSTRUCTION_SITES);
-          console.log('Builder creep.memory.target =  ' + creep.memory.target);
+          targets[n] = roomSearch.find(FIND_CONSTRUCTION_SITES);
+          creep.memory.targets = creep.memory.target.concat(targets[n]);
+          //console.log('Builder creep.memory.target =  ' + creep.memory.target);
         }
-	      //var targets = creep.room.find(FIND_CONSTRUCTION_SITES);
-        if(targets.length) {
-          if(creep.build(targets[0]) == ERR_NOT_IN_RANGE) {
-            rUn(creep, targets[0]);
+          //var targets = creep.room.find(FIND_CONSTRUCTION_SITES);
+        if(creep.memory.targets.length) {
+          if(creep.build(creep.memory.targets[0]) == ERR_NOT_IN_RANGE) {
+            rUn(creep, creep.memory.targets[0]);
           }
         }
 	    } else {
