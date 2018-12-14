@@ -6,7 +6,7 @@ var roleBuilder = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
-
+creep.memory.targets = null;
       if(creep.memory.building && creep.carry.energy == 0) {
         creep.memory.building = false;
         creep.say('🔄 harvest');
@@ -33,7 +33,7 @@ var roleBuilder = {
         }
         console.log('Builder creep.memory.target =  ' + creep.memory.targets);
           //var targets = creep.room.find(FIND_CONSTRUCTION_SITES);
-  
+
         } else {
           var target = Game.getObjectById(creep.memory.targets[0]);
           if(creep.build(target) == ERR_NOT_IN_RANGE) {
