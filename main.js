@@ -213,7 +213,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
         }
         if(creep.memory.role == 'builder') {
 
-            roleBuilder.run(creep);
+            roleHarvester2.run(creep);
         }
 
 
