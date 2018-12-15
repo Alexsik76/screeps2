@@ -7,7 +7,7 @@ var roleAttacker1 = {
     run: function(creep) {
 
       if(!Memory.invasion){
-        var pos3333 =  new RoomPosition(13, 43, Memory.roomName);
+        var pos3333 =  new RoomPosition(18, 45, Memory.roomName);
         creep.moveTo(pos3333);
       } else {
             var pos3333 =  new RoomPosition(17, 3, 'E11N46');
