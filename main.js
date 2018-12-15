@@ -154,7 +154,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
       }
     }
     console.log('Memory.invasion =' + Memory.invasion);
-    if(attackers.length > 1 && rattackers.length > 4 && !defendRoom(Memory.roomName)){
+    if(attackers.length > 2 && rattackers.length > 4 && !defendRoom(Memory.roomName)){
     Memory.invasion = true;
     }
     if (attackers.length < 1 && rattackers.length < 1){
