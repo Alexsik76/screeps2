@@ -40,7 +40,7 @@ var roleHarvester2 = {
     }
   }
 
-if(creep.carry.energy == creep.carry.energyCapacity && !creep.memory.transport){
+if(creep.carry.energy > 0 && !creep.memory.transport){
   creep.moveTo(15, 9);
 }
 
