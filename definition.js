@@ -6,7 +6,7 @@ function definition(){
     Memory.roomName = Game.rooms[i].name;
     }
   }
-
+console.log('Game.rooms.length ' + Game.rooms.length);
   Memory.energyAv = Game.rooms[Memory.roomName].energyAvailable;
   if(!Memory.structuresAll){
     Memory.structuresAll = Game.rooms[Memory.roomName].find(FIND_STRUCTURES).length;
