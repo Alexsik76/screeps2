@@ -62,7 +62,7 @@ console.log('Not energy for spawn harvester');
 }
     var harvesters2 = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester2');
     console.log('Harvesters2: ' + harvesters2.length);
-        if(harvesters2.length < 2 && Memory.readyToInvasion1) {
+        if(harvesters2.length < 2 && Memory.energyAv > 749) {
           readyToInvasion += 1;
         var newName = 'HarvesterWar' + Game.time;
         console.log('Spawning new harvesterWar: ' + newName);
