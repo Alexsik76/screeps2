@@ -1,13 +1,13 @@
 var defendRoom = require('defend');
 function definition(){
 
-  if(!Memory.roomName){
-    for(let i in Game.rooms){
-    Memory.roomName = Game.rooms[i].name;
-    }
-  }
+
+
+    Memory.roomName = Game.rooms[0].name;
+
+
   let rooms = Game.rooms;
-console.log('Game.rooms.length ' + rooms);
+console.log('Game.rooms.length ' + Memory.roomName);
   Memory.energyAv = Game.rooms[Memory.roomName].energyAvailable;
   if(!Memory.structuresAll){
     Memory.structuresAll = Game.rooms[Memory.roomName].find(FIND_STRUCTURES).length;
