@@ -157,7 +157,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
     if(attackers.length > 1 && rattackers.length > 1 && !defendRoom(Memory.roomName)){
     Memory.invasion = true;
     }
-    if (attackers.length < 0 && rattackers.length < 0){
+    if (attackers.length < 1 && rattackers.length < 1){
     Memory.invasion = false;
     }
 //   Memory.invasion = true;
