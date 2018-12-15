@@ -25,7 +25,7 @@ var roleUpgrader = {
 
 	    if(creep.memory.upgrading) {
         if(creep.pos.isNearTo(creep.room.controller)){
-          creep.upgradeController;
+          creep.upgradeController(creep.room.controller);
         } else {
           creep.moveTo(creep.room.controller, {visualizePathStyle: {stroke: '#ffffff'}});
         }
