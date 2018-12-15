@@ -1,10 +1,11 @@
 var defendRoom = require('defend');
 function definition(){
-
-
-
-    Memory.roomName = Game.rooms[0];
-
+  if(!Memory.roomName){
+    for(let i in Game.rooms){
+    Memory.roomName = Game.rooms[i].name;
+    console.log('rooms i = ' + i);
+    }
+  }
 
 //let rooms = Game.rooms;
 console.log('Game.rooms.length ' + Memory.roomName);
