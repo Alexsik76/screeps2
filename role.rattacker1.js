@@ -39,10 +39,11 @@ var roleRAttacker1 = {
               if(creep.rangedAttack(enemies) == ERR_NOT_IN_RANGE) {
 
               creep.moveTo(enemies);
+
+              }
               if(creep.pos.isNearTo(enemies)){
                 creep.moveTo(Game.spawns[Spawn1]);
-                creep.rangedAttack(enemies)
-              }
+                creep.rangedAttack(enemies);
             }
               } else {
                 //creep.memory.attack = false;
