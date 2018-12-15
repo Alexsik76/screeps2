@@ -19,6 +19,7 @@ var roleRAttacker1 = {
           } else {
             creep.memory.attack = true;
             }
+          }
             /*
       if(creep.memory.attack){
         if(!enemies){
