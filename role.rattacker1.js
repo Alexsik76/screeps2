@@ -12,11 +12,11 @@ var roleRAttacker1 = {
         creep.moveTo(pos3333);
       }
        else {
-            var pos3333 =  new RoomPosition(25, 37, 'E11N46');
+            var pos3333 =  new RoomPosition(20, 2, 'E11N46');
             if(!creep.pos.isNearTo(pos3333) && !creep.memory.attack){
             creep.say('🛡️ To attack neighbor');
             creep.memory.attack = false;
-            creep.moveTo(new RoomPosition(25, 37, 'E11N46');
+            creep.moveTo(new RoomPosition(20, 2, 'E11N46');
             } else {
               creep.memory.attack = true;
               }
@@ -42,7 +42,7 @@ var roleRAttacker1 = {
 
               }
               if(creep.pos.inRangeTo(enemies, 2)){
-                creep.moveTo(new RoomPosition(13, 43, Memory.roomName));
+                creep.moveTo(new RoomPosition(20, 2, Memory.roomName));
                 creep.rangedAttack(enemies);
             }
 
@@ -55,7 +55,7 @@ var roleRAttacker1 = {
 
 }
 } else {
-  creep.moveTo(new RoomPosition(25, 37, 'E11N46'));
+  creep.moveTo(new RoomPosition(20, 2, 'E11N46'));
 }
 
   }
