@@ -5,7 +5,7 @@ var renew = require('renew');
 var roleRAttacker1 = {
     /** @param {Creep} creep **/
     run: function(creep) {
-
+/*
       if(!Memory.invasion){
         console.log('Rattacker  Memory.invasion ' + Memory.invasion);
         var pos3333 =  new RoomPosition(13, 43, Memory.roomName);
@@ -59,6 +59,7 @@ var roleRAttacker1 = {
 //}
 
   }
+  */
 }
 };
 module.exports = roleRAttacker1;
