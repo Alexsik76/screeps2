@@ -49,12 +49,14 @@ var roleRAttacker1 = {
               } else {
                 //creep.memory.attack = false;
 
-                creep.moveTo(new RoomPosition(25, 37, 'E11N46'));
+
                 creep.memory.attack = false;
               }
 
 }
-    }
+} else {
+  creep.moveTo(new RoomPosition(25, 37, 'E11N46'));
+}
 
   }
 }
