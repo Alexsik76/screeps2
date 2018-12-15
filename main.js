@@ -133,7 +133,7 @@ console.log('Not energy for spawn harvester');
     console.log('Attackers: ' + attackers.length);
  console.log('Ready To Invasion 2 = ' + readyToInvasion);
     if(readyToInvasion < 1  && Memory.readyToInvasion1){
-      if(attackers.length < 6){
+      if(attackers.length < 3){
         var newName = 'Attacker' + Game.time;
         console.log('Spawning new attacker: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([TOUGH,TOUGH,TOUGH,TOUGH,MOVE,MOVE,
@@ -145,7 +145,7 @@ console.log('Not energy for spawn harvester');
     var rattackers = _.filter(Game.creeps, (creep) => creep.memory.role == 'rattacker1');
     console.log('RAttackers: ' + rattackers.length);
       if(readyToInvasion < 1  && Memory.readyToInvasion1){
-      if(rattackers.length < 6){
+      if(rattackers.length < 4){
         var newName = 'RangeAttacker' + Game.time;
         console.log('Spawning new rangeattacker: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,
