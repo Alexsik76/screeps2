@@ -29,7 +29,7 @@ var roleBuilder = {
             }
         }
 
-renew(creep);
+//renew(creep);
 
 
     }
