@@ -163,7 +163,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
 //   Memory.invasion = true;
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
   console.log('Invaders: ' + invaders.length);
-  if(readyToInvasion < 2  && Memory.readyToInvasion1){
+  if(readyToInvasion < 1  && Memory.readyToInvasion1){
     if(invaders.length < 0){
       var newName = 'Invader' + Game.time;
       console.log('Spawning new invader: ' + newName);
