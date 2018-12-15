@@ -157,7 +157,7 @@ console.log('Not energy for spawn harvester');
     if((attackers.length > 5) && (rattackers.length > 4) && !defendRoom(Memory.roomName)){
     Memory.invasion = true;
     }
-    if ((attackers.length < 1) && (rattackers.length < 1)){
+    if ((attackers.length < 1) || (rattackers.length < 1)){
     Memory.invasion = false;
     }
     //Memory.invasion = false;
@@ -166,7 +166,7 @@ console.log('Not energy for spawn harvester');
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
   console.log('Invaders: ' + invaders.length);
   if(readyToInvasion < 1  && Memory.readyToInvasion1){
-    if(invaders.length < 0){
+    if(invaders.length < 1){
       var newName = 'Invader' + Game.time;
       console.log('Spawning new invader: ' + newName);
   Game.spawns['Spawn1'].spawnCreep([WORK,CLAIM,MOVE,MOVE,
