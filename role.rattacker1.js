@@ -34,7 +34,7 @@ var roleRAttacker1 = {
                 if(enemies == null){
               //  creep.say('Attack creep');
                 var enemies = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
-
+}
             if(enemies) {
               if(creep.rangedAttack(enemies) == ERR_NOT_IN_RANGE) {
 
@@ -54,7 +54,7 @@ var roleRAttacker1 = {
               }
 
 }
-} //else {
+ //else {
 //  creep.moveTo(new RoomPosition(20, 2, 'E11N46'));
 //}
 
