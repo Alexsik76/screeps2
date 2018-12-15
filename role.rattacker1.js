@@ -20,7 +20,7 @@ var roleRAttacker1 = {
             creep.memory.attack = true;
             }
           }
-            /*
+
       if(creep.memory.attack){
         if(!enemies){
           var enemies = creep.pos.findClosestByRange(FIND_HOSTILE_STRUCTURES, {
@@ -54,13 +54,12 @@ var roleRAttacker1 = {
                 creep.memory.attack = false;
               }
 
+} else {
+  creep.moveTo(new RoomPosition(20, 2, 'E11N46'));
 }
- //else {
-//  creep.moveTo(new RoomPosition(20, 2, 'E11N46'));
-//}
 
-  }
-  */
+
+
 }
 };
 module.exports = roleRAttacker1;
