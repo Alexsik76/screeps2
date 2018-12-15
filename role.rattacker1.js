@@ -5,21 +5,21 @@ var renew = require('renew');
 var roleRAttacker1 = {
     /** @param {Creep} creep **/
     run: function(creep) {
-/*
+
       if(!Memory.invasion){
-        console.log('Rattacker  Memory.invasion ' + Memory.invasion);
+        console.log('Rattacker Memory.invasion ' + Memory.invasion);
         var pos3333 =  new RoomPosition(13, 43, Memory.roomName);
         creep.moveTo(pos3333);
-      }
-       else {
-            var pos3333 =  new RoomPosition(20, 2, 'E11N46');
-            if(!creep.pos.isNearTo(pos3333) && !creep.memory.attack){
-            creep.say('🛡️ To attack neighbor');
-            creep.memory.attack = false;
-            creep.moveTo(new RoomPosition(20, 2, 'E11N46');
-            } else {
-              creep.memory.attack = true;
-              }
+      } else {
+        var pos3333 =  new RoomPosition(20, 2, 'E11N46');
+        if(!creep.pos.isNearTo(pos3333) && !creep.memory.attack){
+          creep.say('🛡️ To attack neighbor');
+          creep.memory.attack = false;
+          creep.moveTo(new RoomPosition(20, 2, 'E11N46');
+          } else {
+            creep.memory.attack = true;
+            }
+            /*
       if(creep.memory.attack){
         if(!enemies){
           var enemies = creep.pos.findClosestByRange(FIND_HOSTILE_STRUCTURES, {
