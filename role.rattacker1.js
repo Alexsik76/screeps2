@@ -40,7 +40,7 @@ var roleRAttacker1 = {
 
               creep.moveTo(enemies);
               if(creep.pos.isNearTo(enemies)){
-                creep.rangedMassAttack();
+                creep.moveTo(Game.spawns[Spawn1]);
               }
             }
               } else {
