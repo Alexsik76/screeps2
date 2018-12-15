@@ -54,9 +54,9 @@ var roleRAttacker1 = {
               }
 
 }
-} else {
-  creep.moveTo(new RoomPosition(20, 2, 'E11N46'));
-}
+} //else {
+//  creep.moveTo(new RoomPosition(20, 2, 'E11N46'));
+//}
 
   }
 }
