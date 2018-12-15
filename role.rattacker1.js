@@ -41,7 +41,11 @@ var roleRAttacker1 = {
               creep.moveTo(enemies);
 
               }
-      
+              if(creep.pos.isNearTo(enemies)){
+                creep.moveTo(new RoomPosition(13, 43, Memory.roomName));
+                creep.rangedAttack(enemies);
+            }
+
               } else {
                 //creep.memory.attack = false;
 
