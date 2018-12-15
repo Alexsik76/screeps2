@@ -154,10 +154,10 @@ console.log('Not energy for spawn harvester');
       }
     }
 
-    if(attackers.length > 5 && rattackers.length > 4 && !defendRoom(Memory.roomName)){
+    if((attackers.length > 5) && (rattackers.length > 4) && !defendRoom(Memory.roomName)){
     Memory.invasion = true;
     }
-    if (attackers.length < 1 && rattackers.length < 1){
+    if ((attackers.length < 1) && (rattackers.length < 1)){
     Memory.invasion = false;
     }
     //Memory.invasion = false;
