@@ -148,8 +148,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
       if(rattackers.length < 6){
         var newName = 'RangeAttacker' + Game.time;
         console.log('Spawning new rangeattacker: ' + newName);
-        Game.spawns['Spawn1'].spawnCreep([MOVE,MOVE,
-          MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,
+        Game.spawns['Spawn1'].spawnCreep([MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,
           ATTACK,RANGED_ATTACK,RANGED_ATTACK,RANGED_ATTACK,RANGED_ATTACK,
           RANGED_ATTACK,], newName,{memory: {role: 'rattacker1'}});
       }
