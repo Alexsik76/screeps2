@@ -1,6 +1,6 @@
 var rUn = require('run1');
 var defendRoom = require('defend');
-var definition = require ('definition');
+
 var renew = require('renew');
 var roleRAttacker1 = {
     /** @param {Creep} creep **/
