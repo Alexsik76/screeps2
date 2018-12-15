@@ -49,7 +49,7 @@ var roleRAttacker1 = {
               } else {
                 //creep.memory.attack = false;
 
-                creep.moveTo(pos3333);
+                creep.moveTo(new RoomPosition(25, 37, 'E11N46'));
                 creep.memory.attack = false;
               }
 
