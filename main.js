@@ -153,7 +153,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
           RANGED_ATTACK,], newName,{memory: {role: 'rattacker1'}});
       }
     }
-    if(attackers.length > 7 && attackers.length > 5 && !defendRoom(Memory.roomName)){
+    if(attackers.length > 7 && rattackers.length > 5 && !defendRoom(Memory.roomName)){
     Memory.invasion = true;
     }
     if (attackers.length < 0 && rattackers.length < 0){
