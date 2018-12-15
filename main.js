@@ -160,7 +160,7 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
     if (attackers.length < 1 && rattackers.length < 1){
   //  Memory.invasion = false;
     }
-   Memory.invasion = false;
+  
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
   console.log('Invaders: ' + invaders.length);
   if(readyToInvasion < 1  && Memory.readyToInvasion1){
