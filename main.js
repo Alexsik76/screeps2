@@ -131,7 +131,7 @@ console.log('Not energy for spawn harvester');
 
     var attackers = _.filter(Game.creeps, (creep) => creep.memory.role == 'attacker1');
     console.log('Attackers: ' + attackers.length);
-console.log('Ready To Invasion 2 = ' + readyToInvasion);
+ console.log('Ready To Invasion 2 = ' + readyToInvasion);
     if(readyToInvasion < 1  && Memory.readyToInvasion1){
       if(attackers.length < 6){
         var newName = 'Attacker' + Game.time;
