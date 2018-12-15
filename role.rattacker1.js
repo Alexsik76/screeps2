@@ -12,7 +12,7 @@ var roleRAttacker1 = {
         creep.moveTo(pos3333);
       } else {
         var pos3333 =  new RoomPosition(20, 2, 'E11N46');
-        if(!creep.pos.isNearTo(pos3333) && !creep.memory.attack){
+        if(!creep.memory.attack){
           creep.say('🛡️ To attack neighbor');
           creep.memory.attack = false;
           creep.moveTo(new RoomPosition(20, 2, 'E11N46');
