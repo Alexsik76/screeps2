@@ -160,7 +160,7 @@ console.log('Not energy for spawn harvester');
     if ((attackers.length < 1) || (rattackers.length < 1)){
     Memory.invasion = false;
     }
-    Memory.invasion = true;
+    //Memory.invasion = true;
     console.log('Memory.invasion =' + Memory.invasion);
     console.log('atta = ' + (attackers.length < 1) + (rattackers.length < 1));
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
