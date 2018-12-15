@@ -40,6 +40,9 @@ var roleHarvester2 = {
     }
   }
 
+if(creep.carry.energy == creep.carry.energyCapacity && !creep.memory.transport){
+  creep.moveTo(15, 9);
+}
 
       }
 };
