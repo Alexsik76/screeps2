@@ -153,14 +153,15 @@ console.log('Ready To Invasion 2 = ' + readyToInvasion);
           RANGED_ATTACK,], newName,{memory: {role: 'rattacker1'}});
       }
     }
-    console.log('Memory.invasion =' + Memory.invasion);
+
     if(attackers.length > 5 && rattackers.length > 4 && !defendRoom(Memory.roomName)){
     Memory.invasion = true;
     }
     if (attackers.length < 1 && rattackers.length < 1){
     Memory.invasion = false;
     }
-//Memory.invasion = false;
+    //Memory.invasion = false;
+    console.log('Memory.invasion =' + Memory.invasion);
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
   console.log('Invaders: ' + invaders.length);
   if(readyToInvasion < 1  && Memory.readyToInvasion1){
