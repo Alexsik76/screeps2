@@ -7,12 +7,12 @@ var roleRAttacker1 = {
     run: function(creep) {
 
       if(!Memory.invasion){
-        console.log('Rattacker Memory.invasion ' + Memory.invasion);
+      //  console.log('Rattacker Memory.invasion ' + Memory.invasion);
         var pos3333 =  new RoomPosition(13, 43, Memory.roomName);
         creep.moveTo(pos3333);
       } else {
         var pos3333 =  new RoomPosition(20, 2, 'E11N46');
-        if(!creep.memory.attack){
+        if(!creep.pos.isNearTo(pos3333) && !creep.memory.attack){
           creep.say('🛡️ To attack neighbor');
           creep.memory.attack = false;
           creep.moveTo(new RoomPosition(20, 2, 'E11N46');
