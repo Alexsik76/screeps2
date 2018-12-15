@@ -13,7 +13,7 @@ var roleRAttacker1 = {
       }
        else {
             var pos3333 =  new RoomPosition(17, 3, 'E11N46');
-            if(!creep.pos.isNearTo(new RoomPosition(25, 37, 'E11N46')
+            if(!creep.pos.isNearTo(new RoomPosition(25, 37, 'E11N46'))
              && !creep.memory.attack){
             creep.say('🛡️ To attack neighbor');
             creep.memory.attack = false;
@@ -60,6 +60,6 @@ var roleRAttacker1 = {
 }
 
   }
-
+}
 };
 module.exports = roleRAttacker1;
