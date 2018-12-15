@@ -3,10 +3,10 @@ function definition(){
 
 
 
-    Memory.roomName = Game.rooms[0].name;
+    Memory.roomName = Game.rooms[0];
 
 
-  let rooms = Game.rooms;
+//let rooms = Game.rooms;
 console.log('Game.rooms.length ' + Memory.roomName);
   Memory.energyAv = Game.rooms[Memory.roomName].energyAvailable;
   if(!Memory.structuresAll){
