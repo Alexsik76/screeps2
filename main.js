@@ -114,10 +114,12 @@ console.log('Not energy for spawn harvester');
     console.log('Builder: ' + builders.length);
     if(builders.length < 1 && targets > 0){
       readyToInvasion += 1;
-      if(Memory.energyAv > 449) {
+      if(Memory.energyAv > 699) {
         var newName = 'BuilderBig' + Game.time;
         console.log('Spawning new builder big: ' + newName);
-        Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE,MOVE,MOVE], newName,
+        Game.spawns['Spawn1'].spawnCreep([WORK,WORK,WORK,WORK,CARRY,
+                                          CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,
+                                          MOVE,MOVE,MOVE,MOVE,MOVE], newName,
            {memory: {role: 'builder'}});
       } else {
         if(Memory.energyAv > 299){
