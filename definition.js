@@ -3,7 +3,7 @@ function definition(){
 
 
     Memory.roomName = 'E11N47';
-  
+
 
 //let rooms = Game.rooms;
 console.log('Game.rooms.length ' + Memory.roomName);
@@ -58,6 +58,9 @@ Memory.containerId = cont0.store[RESOURCE_ENERGY] < cont1.store[RESOURCE_ENERGY]
     }
 
 console.log('Memory.readyToInvasion1 = ' + Memory.readyToInvasion1);
+Memory.controller = Game.rooms[Memory.roomName].controller.id;
+console.log('Controller level ==== ' + getObjectById(Memory.controller).level);
+
 //console.log('MEM2  ' + Game.getObjectById(Memory.containers[0].id));
 };
 module.exports = definition;
