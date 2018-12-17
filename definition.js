@@ -56,7 +56,7 @@ Memory.containerId = cont0.store[RESOURCE_ENERGY] < cont1.store[RESOURCE_ENERGY]
     defendRoom(Memory.roomName)) {
       Memory.readyToInvasion1 = false;
     }
-console.log('room1 ===' + room1);
+//console.log('room1 ===' + room1);
 const room1 = Memory.roomName;
 console.log('room1 ===' + room1);
 
