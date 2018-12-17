@@ -1,4 +1,4 @@
-function LetBuild(roomName) {
+function letBuild(roomName) {
   if(Game.getObjectById(Memory.controller.level) > 4 ){
     if(Memory.containersId.length > 0 &&
       Memory.linksId.length <  Memory.containersId.length){
@@ -17,3 +17,4 @@ function LetBuild(roomName) {
 
 
 }
+module.exports = letBuild;

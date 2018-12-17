@@ -15,6 +15,7 @@ var roleRAttacker1 = require('role.rattacker1');
 var definition = require('definition');
 var roleHarvester2 = require('role.harvester2');
 var roleInvader = require('role.invader');
+var letBuild = require('building');
 
 module.exports.loop = function () {
 definition();
@@ -271,7 +272,7 @@ console.log('Not energy for spawn harvester');
 console.log('Energy Avalible = ' + Memory.energyAv);
 console.log('Storage energy = ' + Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY]);
 defendRoom(Memory.roomName);
-
+letBuild(Memory.roomName);
 
 
 
