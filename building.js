@@ -3,7 +3,10 @@ function letBuild(roomName) {
     //console.log('Continers and Links = ' + !Memory.linksId);
     if(!Memory.linksId || (Memory.containersId.length > 0 &&
       Memory.linksId.length <  Memory.containersId.length)){
-      
+      for(let i in Memory.containersId.length){
+        posCont0 = Game.getObjectById(Memory.containersId[i]).pos;
+        let found = Game.rooms[Memory.roomName].lookForAtArea(LOOK_STRUCTURES,10,5,11,7);
+      }
     }
   }
 
