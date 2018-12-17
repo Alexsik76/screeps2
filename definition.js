@@ -29,7 +29,7 @@ console.log('Game.rooms.length ' + Memory.roomName);
     Memory.linksId = links.map(function(name) {
         return name.id
     });
-        
+
     Memory.towers = Game.rooms[Memory.roomName].find(FIND_STRUCTURES, {
                               filter: (structure) => {
                               return (structure.structureType == STRUCTURE_TOWER)
@@ -69,9 +69,9 @@ let room1 = Game.rooms[Memory.roomName];
 console.log('room1 ==== ' + JSON.stringify(Game.rooms['E11N47']));
 
 
-console.log('Memory.readyToInvasion1 = ' + Memory.readyToInvasion1);
-Memory.controller = Game.rooms[Memory.roomName].controller.id;
-console.log('Controller level ==== ' + Game.getObjectById(Memory.controller).level);
+//console.log('Memory.readyToInvasion1 = ' + Memory.readyToInvasion1);
+//Memory.controller = Game.rooms[Memory.roomName].controller.id;
+//console.log('Controller level ==== ' + Game.getObjectById(Memory.controller).level);
 
 };
 module.exports = definition;
