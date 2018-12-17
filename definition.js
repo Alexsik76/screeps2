@@ -56,6 +56,11 @@ Memory.containerId = cont0.store[RESOURCE_ENERGY] < cont1.store[RESOURCE_ENERGY]
     defendRoom(Memory.roomName)) {
       Memory.readyToInvasion1 = false;
     }
+console.log('room1 ===' + room1);
+let room1 = Memory.roomName;
+console.log('room1 ===' + room1);
+
+
 
 console.log('Memory.readyToInvasion1 = ' + Memory.readyToInvasion1);
 Memory.controller = Game.rooms[Memory.roomName].controller.id;
