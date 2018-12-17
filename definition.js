@@ -21,6 +21,15 @@ console.log('Game.rooms.length ' + Memory.roomName);
     Memory.containersId = containers.map(function(name) {
         return name.id
     });
+    let links = Game.rooms[Memory.roomName].find(FIND_STRUCTURES, {
+                              filter: (structure) => {
+                              return (structure.structureType == STRUCTURE_LINK)
+                              }
+                            });
+    Memory.linksId = links.map(function(name) {
+        return name.id
+    });
+        
     Memory.towers = Game.rooms[Memory.roomName].find(FIND_STRUCTURES, {
                               filter: (structure) => {
                               return (structure.structureType == STRUCTURE_TOWER)
