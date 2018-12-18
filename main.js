@@ -117,7 +117,7 @@ console.log('Not energy for spawn harvester');
     if(builders.length < 1 && targets > 0){
       readyToInvasion += 1;
       if(Memory.energyAv > 999) {
-        var newName = 'BuilderBig' + Game.time;
+        let newName = 'BuilderBig' + Game.time;
         console.log('Spawning new builder big: ' + newName);
         Game.spawns.Spawn1.spawnCreep([WORK,WORK,WORK,WORK,CARRY,
                                           CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,
@@ -125,7 +125,7 @@ console.log('Not energy for spawn harvester');
            {memory: {role: 'builder'}});
       } else {
         if(Memory.energyAv > 299){
-          var newName = 'Builder' + Game.time;
+          let newName = 'Builder' + Game.time;
           console.log('Spawning new builder: ' + newName);
           Game.spawns.Spawn1.spawnCreep([WORK,CARRY,CARRY,MOVE,MOVE], newName,
              {memory: {role: 'builder'}});
@@ -138,7 +138,7 @@ console.log('Not energy for spawn harvester');
  console.log('Ready To Invasion 2 = ' + readyToInvasion);
     if(readyToInvasion < 1  && Memory.readyToInvasion1){
       if(attackers.length < 0){
-        var newName = 'Attacker' + Game.time;
+        let newName = 'Attacker' + Game.time;
         console.log('Spawning new attacker: ' + newName);
         Game.spawns.Spawn1.spawnCreep([TOUGH,TOUGH,TOUGH,TOUGH,MOVE,MOVE,
           MOVE,TOUGH,TOUGH,TOUGH,TOUGH,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,
@@ -150,7 +150,7 @@ console.log('Not energy for spawn harvester');
     console.log('RAttackers: ' + rattackers.length);
       if(readyToInvasion < 1  && Memory.readyToInvasion1){
       if(rattackers.length < 0){
-        var newName = 'RangeAttacker' + Game.time;
+        let newName = 'RangeAttacker' + Game.time;
         console.log('Spawning new rangeattacker: ' + newName);
         Game.spawns.Spawn1.spawnCreep([MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,
           ATTACK,RANGED_ATTACK,RANGED_ATTACK,RANGED_ATTACK,RANGED_ATTACK,
@@ -171,7 +171,7 @@ console.log('Not energy for spawn harvester');
   console.log('Invaders: ' + invaders.length);
   if(readyToInvasion < 1  && Memory.readyToInvasion1){
     if(invaders.length < 0){
-      var newName = 'Invader' + Game.time;
+      let newName = 'Invader' + Game.time;
       console.log('Spawning new invader: ' + newName);
   Game.spawns.Spawn1.spawnCreep([WORK,CLAIM,MOVE,MOVE,
     MOVE,MOVE,ATTACK,RANGED_ATTACK], newName,{memory: {role: 'invader'}});
@@ -190,7 +190,7 @@ console.log('Not energy for spawn harvester');
     });
 
 
-     for(var name in Game.creeps) {
+     for(let name in Game.creeps) {
         var creep = Game.creeps[name];
         if(creep.memory.role == 'harvester') {
             roleHarvester.run(creep);
