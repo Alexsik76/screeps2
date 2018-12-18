@@ -32,7 +32,7 @@ console.log('Miners: ' + miners.length);
 
 if(miners.length < Memory.containers.length && Memory.energyAv > 549) {
     number = Math.abs(number-1);
-    var newName = 'Miner' + number;
+    let newName = 'Miner' + number;
     console.log('Spawning new miner: ' + newName);
     Game.spawns['Spawn1'].spawnCreep([WORK,WORK,WORK,WORK,WORK,MOVE], newName,
         {memory: {role: 'miner' + number}});
@@ -48,13 +48,13 @@ if(miners.length < Memory.containers.length && Memory.energyAv > 549) {
         console.log(Game.spawns['Spawn1'].energy);
         if(Memory.energyAv > 500 && Memory.harvesting == false)
         {
-        var newName = 'HarvesterBig' + Game.time;
+        let newName = 'HarvesterBig' + Game.time;
         console.log('Spawning new harvesterBig' + newName);
 
         Game.spawns['Spawn1'].spawnCreep([CARRY,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE,MOVE], newName,
             {memory: {role: 'harvester'}});
         } else {
-        var newName = 'Harvester' + Game.time;
+        let newName = 'Harvester' + Game.time;
         console.log('Spawning new harvester: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
             {memory: {role: 'harvester'}});
@@ -65,7 +65,7 @@ console.log('Not energy for spawn harvester');
     console.log('Harvesters2: ' + harvesters2.length);
         if(harvesters2.length < 2 && Memory.energyAv > 749) {
           readyToInvasion += 1;
-        var newName = 'HarvesterWar' + Game.time;
+        let newName = 'HarvesterWar' + Game.time;
         console.log('Spawning new harvesterWar: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([CARRY,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE,MOVE], newName,
             {memory: {role: 'harvester2'}})
@@ -75,7 +75,7 @@ console.log('Not energy for spawn harvester');
 
     if(upgraders.length < 2 && Memory.energyAv > 499) {
       readyToInvasion += 1;
-        var newName = 'Upgrader' + Game.time;
+        let newName = 'Upgrader' + Game.time;
         console.log('Spawning new upgrader: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE,WORK,CARRY,MOVE,MOVE], newName,
             {memory: {role: 'upgrader'}});
@@ -85,9 +85,9 @@ console.log('Not energy for spawn harvester');
 
     if(upgraders2.length < 0 && Memory.energyAv > 249) {
       readyToInvasion += 1;
-        var newName = 'Upgrader2' + Game.time;
+        let newName = 'Upgrader2' + Game.time;
         console.log('Spawning new upgrader: ' + newName);
-        Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], newName,
+        Game.spawns.Spawn1.spawnCreep([WORK,CARRY,MOVE,MOVE], newName,
             {memory: {role: 'upgrader2'}});
     }
 
@@ -95,7 +95,7 @@ console.log('Not energy for spawn harvester');
     console.log('Doctors: ' + doctors.length);
     if(doctors.length < 1 && Memory.energyAv > 299) {
       readyToInvasion += 1;
-        var newName = 'Doctor' + Game.time;
+        let newName = 'Doctor' + Game.time;
         console.log('Spawning new Doctor: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([HEAL,MOVE], newName,
             {memory: {role: 'doctor'}});
@@ -104,7 +104,7 @@ console.log('Not energy for spawn harvester');
     console.log('Repairers: ' + repairers.length);
     if(repairers.length < 2 && Memory.energyAv > 249) {
       readyToInvasion += 1;
-        var newName = 'Repairer' + Game.time;
+        let newName = 'Repairer' + Game.time;
         console.log('Spawning new Repairer: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], newName,
             {memory: {role: 'repairer'}});
@@ -273,13 +273,6 @@ console.log('Energy Avalible = ' + Memory.energyAv);
 console.log('Storage energy = ' + Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY]);
 defendRoom(Memory.roomName);
 letBuild(Memory.roomName);
-
-
-
-//if(!Memory.SCRIPT_VERSION || Memory.SCRIPT_VERSION != SCRIPT_VERSION) {
-//    Memory.SCRIPT_VERSION = SCRIPT_VERSION
-//    console.log('New code uplodated')
-//}
 
 
 };
