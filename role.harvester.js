@@ -43,7 +43,7 @@ creep.memory.targetHarvest = Memory.containerId;
 
             //  creep.say((target, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE);
                 if(creep.transfer(target, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(target);
+                creep.moveTo(target, {reusePath: 50});
 
                     //rUn(creep, target);
 
@@ -56,7 +56,7 @@ creep.memory.targetHarvest = Memory.containerId;
               if(Memory.harvesting){
                   var sources = creep.room.find(FIND_SOURCES);
                     if(creep.harvest(sources[1]) == ERR_NOT_IN_RANGE) {
-                      creep.moveTo(sources[1], {visualizePathStyle: {stroke: '#ffaa00'}});
+                      creep.moveTo(sources[1], {reusePath: 50}, {visualizePathStyle: {stroke: '#ffaa00'}});
                     }
               } else{
                 let target1 = Game.getObjectById(creep.memory.targetHarvest);
