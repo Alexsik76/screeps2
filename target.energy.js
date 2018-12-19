@@ -11,7 +11,7 @@ function TargetEnergy(creep){
   } else{
     if (creep.room.storage && creep.room.storage.store[RESOURCE_ENERGY] > 1000){
       if(creep.withdraw(creep.room.storage, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-        creep.moveTo(creep.room.storage);
+        creep.moveTo(creep.room.storage, {reusePath: 50});
       }
     } else{
         if(creep.withdraw(Memory.container, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
