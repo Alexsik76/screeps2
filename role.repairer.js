@@ -9,7 +9,9 @@ var roleRepairer= {
 
 
             var closestDamagedStructure = creep.pos.findClosestByRange(FIND_STRUCTURES, {
-                filter: (structure) => structure.hits < structure.hitsMax
+                filter: (structure) => structure.hits < structure.hitsMax &&
+                (structure.structureType != STRUCTURE_WALL || structure.structureType == STRUCTURE_WALL &&
+                structure.hits < Memory.wallHit)
             });
 
         if(!closestDamagedStructure){
@@ -26,22 +28,11 @@ var roleRepairer= {
 	    }
 	    if(creep.memory.repair) {
         if(creep.carry.energy > 0) {
-          if(closestDamagedStructure.structureType == STRUCTURE_WALL){
-            if(closestDamagedStructure.hits < Memory.wallHit){
-              if(creep.repair(closestDamagedStructure) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(closestDamagedStructure, {visualizePathStyle: {stroke: '#ffffff'}});
-              }
-            } else {
-              closestDamagedStructure = null;
-            }
-          } else {
-            if(creep.repair(closestDamagedStructure) == ERR_NOT_IN_RANGE) {
-              creep.moveTo(closestDamagedStructure, {visualizePathStyle: {stroke: '#ffffff'}});
+          if(creep.repair(closestDamagedStructure) == ERR_NOT_IN_RANGE) {
+            creep.moveTo(closestDamagedStructure, {visualizePathStyle: {stroke: '#ffffff'}});
             }
           }
 
-
-		    }
       } else {
           if(creep.carry.energy < creep.carryCapacity){
             TargetEnergy(creep);
