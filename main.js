@@ -5,6 +5,7 @@ var roleUpgrader2 = require('role.upgrader2');
 var roleBuilder = require('role.builder');
 var roleMiner0 = require('role.miner0');
 var roleMiner1 = require('role.miner1');
+var roleMinerUtrium = require('role.minerUtrium');
 var roleDoctor = require('role.doctor');
 var roleRanger = require('role.ranger');
 var roleRepairer = require('role.repairer');
@@ -21,7 +22,7 @@ var letTrade = require('let.trade');
 
 module.exports.loop = function () {
 definition();
-letTrade(Memory.roomName);
+//letTrade(Memory.roomName);
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
             delete Memory.creeps[name];
@@ -102,6 +103,15 @@ console.log('Not energy for spawn harvester');
         console.log('Spawning new Doctor: ' + newName);
         Game.spawns.Spawn1.spawnCreep([HEAL,MOVE], newName,
             {memory: {role: 'doctor'}});
+    }
+    var minersUtrium = _.filter(Game.creeps, (creep) => creep.memory.role == 'minerUtrium');
+    console.log(' MinersUtrium ' +  minersUtrium.length);
+    if( minersUtrium.length < 1 && Memory.energyAv > 299) {
+      readyToInvasion += 1;
+        let newName = 'MinerUtrium' + Game.time;
+        console.log('Spawning new  MinerUtrium: ' + newName);
+        Game.spawns.Spawn1.spawnCreep([WORK,WORK,MOVE,MOVE], newName,
+            {memory: {role: 'minerUtrium'}});
     }
     var repairers = _.filter(Game.creeps, (creep) => creep.memory.role == 'repairer');
     console.log('Repairers: ' + repairers.length);
@@ -215,6 +225,9 @@ console.log('Not energy for spawn harvester');
          if(creep.memory.role == 'miner1') {
             roleMiner1.run(creep);
         }
+        if(creep.memory.role == 'minerUtrium') {
+           roleMinerUtrium.run(creep);
+       }
         if(creep.memory.role == 'repairer') {
 
               roleRepairer.run(creep);
