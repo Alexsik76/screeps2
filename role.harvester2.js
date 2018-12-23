@@ -21,12 +21,15 @@ var roleHarvester2 = {
     }
   if(creep.memory.transport) {
     let target = Game.getObjectById(creep.memory.targeten);
-    if(creep.transfer(target, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-    creep.moveTo(target);
-    }
     if(creep.transfer(target, RESOURCE_ENERGY) == ERR_FULL){
       creep.memory.transport = false;
+    } else {
+      if(creep.transfer(target, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+        creep.moveTo(target);
+      }
     }
+
+
   }
 
   if(creep.memory.withdraw) {
