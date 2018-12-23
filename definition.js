@@ -71,9 +71,11 @@ if(Memory.wallHit == undefined){
   Memory.wallHit = 1000;
 }
 let allWall = Game.rooms[Memory.roomName].find(FIND_STRUCTURES, {
-    filter: (structure) => structure.structureType == STRUCTURE_WALL});
+    filter: (structure) => structure.structureType == STRUCTURE_WALL && structure.hits < Memory.wallHit});
 
-
+if (!allWall){
+  Memory.wallHit += 1000;
+}
 //console.log('Memory.readyToInvasion1 = ' + Memory.readyToInvasion1);
 //Memory.controller = Game.rooms[Memory.roomName].controller.id;
 //console.log('Controller level ==== ' + Game.getObjectById(Memory.controller).level);
