@@ -18,8 +18,6 @@ var roleHarvester2 = {
     creep.memory.withdraw = false;
     //console.log(creep.name, creep.memory.targeten);
     creep.say('🚚 Transport');
-
-
     }
   if(creep.memory.transport) {
     let target = Game.getObjectById(creep.memory.targeten);
