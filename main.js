@@ -17,7 +17,8 @@ var roleHarvester2 = require('role.harvester2');
 var roleHarvester3 = require('role.harvester3');
 var roleInvader = require('role.invader');
 var letBuild = require('building');
-
+var letTrade = require('let.trade');
+letTrade(Memory.roomName);
 module.exports.loop = function () {
 definition();
 
