@@ -17,7 +17,7 @@ var roleHarvester2 = {
     creep.memory.transport = true;
     creep.memory.withdraw = false;
     //console.log(creep.name, creep.memory.targeten);
-    //creep.say('🚚');
+    creep.say('🚚 Transport');
     //creep.say('ð');
 
     }
