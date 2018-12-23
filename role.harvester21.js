@@ -40,4 +40,3 @@ var roleHarvester2 = {
 
       }
 };
-module.exports = roleHarvester2;
