@@ -12,6 +12,7 @@ for(let i=0; i<orders.length; i++) {
 console.log('terminall orders transferEnergyCost= ' + transferEnergyCost);
     if(transferEnergyCost < maxTransferEnergyCost) {
         Game.market.deal(orders[i].id, amountToBuy, roomName);
+        console.log('terminall orders transferEnergyCost= BAYBAYBAY');
         break;
     }
 }
