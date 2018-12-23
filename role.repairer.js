@@ -31,6 +31,8 @@ var roleRepairer= {
               if(creep.repair(closestDamagedStructure) == ERR_NOT_IN_RANGE) {
                 creep.moveTo(closestDamagedStructure, {visualizePathStyle: {stroke: '#ffffff'}});
               }
+            } else {
+              closestDamagedStructure = null;
             }
           } else {
             if(creep.repair(closestDamagedStructure) == ERR_NOT_IN_RANGE) {
