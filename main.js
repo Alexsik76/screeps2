@@ -18,10 +18,10 @@ var roleHarvester3 = require('role.harvester3');
 var roleInvader = require('role.invader');
 var letBuild = require('building');
 var letTrade = require('let.trade');
-letTrade(Memory.roomName);
+
 module.exports.loop = function () {
 definition();
-
+letTrade(Memory.roomName);
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
             delete Memory.creeps[name];
