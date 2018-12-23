@@ -17,8 +17,9 @@ var roleHarvester2 = {
     creep.memory.transport = true;
     creep.memory.withdraw = false;
     //console.log(creep.name, creep.memory.targeten);
-    creep.say('🚚');
-    
+    //creep.say('🚚');
+    creep.say('ð');
+
     }
   if(creep.memory.transport) {
     let target = Game.getObjectById(creep.memory.targeten);
