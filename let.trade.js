@@ -9,7 +9,7 @@ console.log('terminall orders = ' + orders.length);
 for(let i=0; i<orders.length; i++) {
     const transferEnergyCost = Game.market.calcTransactionCost(
         amountToBuy, roomName, orders[i].roomName);
-
+console.log('terminall orders transferEnergyCost= ' + transferEnergyCost);
     if(transferEnergyCost < maxTransferEnergyCost) {
         Game.market.deal(orders[i].id, amountToBuy, roomName);
         break;
