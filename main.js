@@ -14,6 +14,7 @@ var roleAttacker1 = require('role.attacker1');
 var roleRAttacker1 = require('role.rattacker1');
 var definition = require('definition');
 var roleHarvester2 = require('role.harvester2');
+var roleHarvester3 = require('role.harvester3');
 var roleInvader = require('role.invader');
 var letBuild = require('building');
 
