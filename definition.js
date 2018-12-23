@@ -70,7 +70,7 @@ Memory.containerId = cont0.store[RESOURCE_ENERGY] < cont1.store[RESOURCE_ENERGY]
 if(Memory.wallHit == undefined){
   Memory.wallHit = 1000;
 }
-let allWall = Game.rooms.Memory.roomName.find(FIND_STRUCTURES, {
+let allWall = Game.rooms[Memory.roomName].find(FIND_STRUCTURES, {
     filter: (structure) => structure.structureType == STRUCTURE_WALL});
 
 
