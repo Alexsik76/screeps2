@@ -5,6 +5,7 @@ var roleHarvester3 = {
     /** @param {Creep} creep **/
     run: function(creep) {
 console.log(creep.name, creep.carry.utrium == undefined);
+console.log(creep.name, creep.carry.utrium == creep.carryCapacity);
   if(creep.carry.utrium == undefined && !creep.memory.withdraw){
     creep.memory.transport = false;
     creep.memory.harvest = true;
