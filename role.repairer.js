@@ -13,6 +13,7 @@ var roleRepairer= {
                 (structure.structureType != STRUCTURE_WALL || structure.structureType == STRUCTURE_WALL &&
                 structure.hits < Memory.wallHit)
             });
+            console.log('Memory.wallHit = ' + Memory.wallHit);
 
         if(!closestDamagedStructure){
         creep.memory.repair = false;
