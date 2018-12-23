@@ -5,13 +5,12 @@ function TargetTransport4(creep){
               filter: (structure) => {
                   return (structure.structureType == STRUCTURE_EXTENSION ||
                           structure.structureType == STRUCTURE_SPAWN ||
-                          structure.structureType == STRUCTURE_TOWER ||
-                          structure.structureType == STRUCTURE_TERMINAL)
+                          structure.structureType == STRUCTURE_TOWER)
                           && structure.energy < structure.energyCapacity;
               }
           });
           if(!target){
-            return null;
+            return creep.room.terminal.id;
           } else{
             return target.id;
           }
