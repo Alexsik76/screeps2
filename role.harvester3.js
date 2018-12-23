@@ -8,7 +8,7 @@ var roleHarvester3 = {
   if(creep.carry.utrium == 0 && !creep.memory.withdraw){
     creep.memory.transport = false;
     creep.memory.harvest = true;
-
+    creep.say('HArvest');
   }
   //console.log('creep.memory.targeten = ' + creep.memory.targeten);
   //console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
