@@ -8,7 +8,7 @@ var roleHarvester2 = {
   if(creep.carry.energy == 0 && !creep.memory.withdraw){
     creep.memory.transport = false;
     creep.memory.withdraw = true;
-    creep.say('🔃 withdraw');
+    //creep.say('🔃 withdraw');
   }
   console.log('creep.memory.targeten = ' + creep.memory.targeten);
   console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
@@ -18,7 +18,7 @@ var roleHarvester2 = {
     creep.memory.withdraw = false;
     //console.log(creep.name, creep.memory.targeten);
     //creep.say('🚚');
-    creep.say('ð');
+    //creep.say('ð');
 
     }
   if(creep.memory.transport) {
