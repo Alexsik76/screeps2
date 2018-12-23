@@ -27,7 +27,7 @@ var roleHarvester2 = {
     }
   }
   if(creep.memory.transport) {
-    var target = Game.getObjectById(creep.memory.targeten);
+    let target = Game.getObjectById(creep.memory.targeten);
     if(creep.transfer(target, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
     creep.moveTo(target);
     } else {
