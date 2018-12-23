@@ -26,13 +26,21 @@ var roleRepairer= {
 	    }
 	    if(creep.memory.repair) {
         if(creep.carry.energy > 0) {
-
-          if(creep.repair(closestDamagedStructure) == ERR_NOT_IN_RANGE) {
-            creep.moveTo(closestDamagedStructure, {visualizePathStyle: {stroke: '#ffffff'}});
+          if(closestDamagedStructure.structureType == STRUCTURE_WALL){
+            if(closestDamagedStructure.hits < Memory.wallHit){
+              if(creep.repair(closestDamagedStructure) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(closestDamagedStructure, {visualizePathStyle: {stroke: '#ffffff'}});
+              }
+            }
+          } else {
+            if(creep.repair(closestDamagedStructure) == ERR_NOT_IN_RANGE) {
+              creep.moveTo(closestDamagedStructure, {visualizePathStyle: {stroke: '#ffffff'}});
+            }
           }
+
+
 		    }
-      }
-        else {
+      } else {
           if(creep.carry.energy < creep.carryCapacity){
             TargetEnergy(creep);
           }
