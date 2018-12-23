@@ -6,7 +6,7 @@ var roleHarvester3 = {
     run: function(creep) {
 console.log(creep.name, creep.carry.utrium == undefined);
 console.log(creep.name, creep.carry.utrium == creep.carryCapacity);
-  if(creep.carry.utrium == undefined && !creep.memory.withdraw){
+  if(creep.carry.utrium == undefined && !creep.memory.harvest){
     creep.memory.transport = false;
     creep.memory.harvest = true;
     creep.say('HArvest');
@@ -16,7 +16,7 @@ console.log(creep.name, creep.carry.utrium == creep.carryCapacity);
   if(creep.carry.utrium == creep.carryCapacity && !creep.memory.transport){
     creep.memory.targetres = creep.room.terminal;
     creep.memory.transport = true;
-    creep.memory.withdraw = false;
+    creep.memory.harvest = false;
     //console.log(creep.name, creep.memory.targeten);
     creep.say('🚚 Transport');
     }
@@ -31,7 +31,7 @@ console.log(creep.name, creep.carry.utrium == creep.carryCapacity);
     }
   }
 
-  if(creep.memory.withdraw) {
+  if(creep.memory.harvest) {
     let target1 = Game.getObjectById('5bbcb32940062e4259e9414e');
     console.log(creep.name, target1);
     if(creep.harvest(target1, RESOURCE_UTRIUM) == ERR_NOT_IN_RANGE) {
