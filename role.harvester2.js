@@ -24,6 +24,9 @@ var roleHarvester2 = {
     if(creep.transfer(target, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
     creep.moveTo(target);
     }
+    if(creep.transfer(target, RESOURCE_ENERGY) == ERR_FULL){
+      creep.memory.transport = false;
+    }
   }
 
   if(creep.memory.withdraw) {
