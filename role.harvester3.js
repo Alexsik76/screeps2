@@ -32,7 +32,7 @@ var roleHarvester3 = {
 
   if(creep.memory.withdraw) {
     let target1 = creep.room.extractor;
-    if(creep.withdraw(target1, RESOURCE_UTRIUM) == ERR_NOT_IN_RANGE) {
+    if(creep.harvest(target1, RESOURCE_UTRIUM) == ERR_NOT_IN_RANGE) {
       creep.moveTo(target1);
     }
   }
