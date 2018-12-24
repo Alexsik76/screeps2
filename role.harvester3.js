@@ -14,7 +14,7 @@ var roleHarvester3 = {
   console.log('creep.carry.utrium == creep.carryCapacity = ' + ((creep.transfer(target, RESOURCE_UTRIUM) == ERR_FULL)));
   //console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
   if(creep.carry.U == creep.carryCapacity && !creep.memory.transport){
-    creep.memory.targetres = creep.room.storage;
+    creep.memory.targetres = creep.room.storage.id;
     creep.memory.transport = true;
     creep.memory.harvest = false;
     //console.log(creep.name, creep.memory.targeten);
