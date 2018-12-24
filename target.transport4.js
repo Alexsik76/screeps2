@@ -9,7 +9,7 @@ function TargetTransport4(creep){
                           && structure.energy < structure.energyCapacity;
               }
           });
-          if(!target){
+          if(!target && creep.room.storage.store[RESOURCE_ENERGY] > 400000){
             return creep.room.terminal.id;
           } else{
             return target.id;
