@@ -13,7 +13,7 @@ console.log(creep.name, creep.carry.utrium == creep.carryCapacity);
   }
   console.log('creep.carry.utrium == creep.carryCapacity = ' + creep.carry.U);
   //console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
-  if(creep.carry.utrium == creep.carryCapacity && !creep.memory.transport){
+  if(creep.carry.U == creep.carryCapacity && !creep.memory.transport){
     creep.memory.targetres = creep.room.storage;
     creep.memory.transport = true;
     creep.memory.harvest = false;
