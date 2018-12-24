@@ -11,7 +11,7 @@ console.log(creep.name, creep.carry.utrium == creep.carryCapacity);
     creep.memory.harvest = true;
     creep.say('HArvest');
   }
-  console.log('creep.carry.utrium == creep.carryCapacity = ' + JSON.stringify(creep.carry));
+  console.log('creep.carry.utrium == creep.carryCapacity = ' + creep.carry.U);
   //console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
   if(creep.carry.utrium == creep.carryCapacity && !creep.memory.transport){
     creep.memory.targetres = creep.room.storage;
