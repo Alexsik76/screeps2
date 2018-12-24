@@ -22,7 +22,7 @@ var letTrade = require('let.trade');
 
 module.exports.loop = function () {
 definition();
-//letTrade(Memory.roomName);
+letTrade(Memory.roomName);
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
             delete Memory.creeps[name];
