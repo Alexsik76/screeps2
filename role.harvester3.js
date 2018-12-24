@@ -4,14 +4,14 @@ var roleHarvester3 = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
-console.log(creep.name, creep.carry.utrium == undefined);
-console.log(creep.name, creep.carry.utrium == creep.carryCapacity);
+//console.log(creep.name, creep.carry.utrium == undefined);
+//console.log(creep.name, creep.carry.utrium == creep.carryCapacity);
   if(creep.carry.utrium == undefined && !creep.memory.harvest){
     creep.memory.transport = false;
     creep.memory.harvest = true;
     creep.say('HArvest');
   }
-  console.log('creep.carry.utrium == creep.carryCapacity = ' + creep.carry.U);
+  console.log('creep.carry.utrium == creep.carryCapacity = ' + ((creep.transfer(target, RESOURCE_UTRIUM) == ERR_FULL)));
   //console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
   if(creep.carry.U == creep.carryCapacity && !creep.memory.transport){
     creep.memory.targetres = creep.room.storage;
