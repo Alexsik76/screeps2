@@ -11,7 +11,7 @@ var roleHarvester3 = {
     creep.memory.harvest = true;
     creep.say('HArvest');
   }
-  console.log('creep.carry.utrium == creep.carryCapacity = ' + ((creep.transfer(target, RESOURCE_UTRIUM) == ERR_FULL)));
+
   //console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
   if(creep.carry.U == creep.carryCapacity && !creep.memory.transport){
     creep.memory.targetres = creep.room.storage.id;
@@ -22,6 +22,7 @@ var roleHarvester3 = {
     }
   if(creep.memory.transport) {
     let target = Game.getObjectById(creep.memory.targetres);
+    console.log('creep.carry.utrium == creep.carryCapacity = ' + ((creep.transfer(target, RESOURCE_UTRIUM) == ERR_FULL)));
     if(creep.transfer(target, RESOURCE_UTRIUM) == ERR_FULL){
       creep.memory.transport = false;
     } else {
