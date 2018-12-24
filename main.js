@@ -74,6 +74,15 @@ console.log('Not energy for spawn harvester');
                                       MOVE,MOVE,MOVE,MOVE,MOVE], newName,
                                       {memory: {role: 'harvester2'}})
         }
+        var harvesters3 = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester3');
+        console.log('Harvesters3: ' + harvesters3.length);
+            if(harvesters3.length < 1 && Memory.energyAv > 199) {
+              readyToInvasion += 1;
+              let newName = 'HarvesterUtrium' + Game.time;
+              console.log('Spawning new harvesterUtrium: ' + newName);
+              Game.spawns.Spawn1.spawnCreep([CARRY,CARRY,MOVE,MOVE], newName,
+                                          {memory: {role: 'harvester3'}})
+            }
     var upgraders = _.filter(Game.creeps, (creep) => creep.memory.role == 'upgrader');
     console.log('Upgraders: ' + upgraders.length);
 

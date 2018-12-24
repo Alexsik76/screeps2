@@ -14,7 +14,7 @@ console.log(creep.name, creep.carry.utrium == creep.carryCapacity);
   //console.log('creep.memory.targeten = ' + creep.memory.targeten);
   //console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
   if(creep.carry.utrium == creep.carryCapacity && !creep.memory.transport){
-    creep.memory.targetres = creep.room.terminal;
+    creep.memory.targetres = creep.room.storage;
     creep.memory.transport = true;
     creep.memory.harvest = false;
     //console.log(creep.name, creep.memory.targeten);
@@ -32,9 +32,9 @@ console.log(creep.name, creep.carry.utrium == creep.carryCapacity);
   }
 
   if(creep.memory.harvest) {
-    let target1 = Game.getObjectById('5bbcb32940062e4259e9414e');
+    let target1 = Game.getObjectById('5c1fdffde5f5aa183a685bb7');
     console.log(creep.name, target1);
-    if(creep.harvest(target1, RESOURCE_UTRIUM) == ERR_NOT_IN_RANGE) {
+    if(creep.withdraw(target1, RESOURCE_UTRIUM) == ERR_NOT_IN_RANGE) {
       creep.moveTo(target1);
     }
   }
