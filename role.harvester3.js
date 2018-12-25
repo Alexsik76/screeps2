@@ -14,7 +14,13 @@ var roleHarvester3 = {
 
   //console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
   if(creep.carry.U == creep.carryCapacity && !creep.memory.transport){
-    creep.memory.targetres = creep.room.storage.id;
+
+    if(creep.room.terminal.store[RESOURCE_ENERGY] < 2000){
+      creep.memory.targetres = creep.room.terminal.id
+    } else {
+      creep.memory.targetres = creep.room.storage.id;
+    }
+    console.log('creep.memory.targetres = ' + Game.getObjectById(creep.memory.targetres).structureType);
     creep.memory.transport = true;
     creep.memory.harvest = false;
     //console.log(creep.name, creep.memory.targeten);
@@ -22,7 +28,7 @@ var roleHarvester3 = {
     }
   if(creep.memory.transport) {
     let target = Game.getObjectById(creep.memory.targetres);
-    console.log('creep.carry.utrium == creep.carryCapacity = ' + ((creep.transfer(target, RESOURCE_UTRIUM) == ERR_FULL)));
+
     if(creep.transfer(target, RESOURCE_UTRIUM) == ERR_FULL){
       creep.memory.transport = false;
     } else {
