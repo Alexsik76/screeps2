@@ -299,6 +299,7 @@ console.log('Not energy for spawn harvester');
     }
 console.log('Energy Avalible = ' + Memory.energyAv);
 console.log('Storage energy = ' + Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY]);
+console.table(creeps);
 defendRoom(Memory.roomName);
 //letBuild(Memory.roomName);
 
