@@ -10,7 +10,11 @@ var roleRepairer= {
 
             var closestDamagedStructure = creep.pos.findClosestByRange(FIND_STRUCTURES, {
                 filter: (structure) => structure.hits < structure.hitsMax &&
-                (structure.structureType != STRUCTURE_WALL || structure.structureType == STRUCTURE_WALL &&
+                (structure.structureType != STRUCTURE_WALL  &&
+                 structure.structureType != STRUCTURE_RAMPART ||
+                structure.structureType == STRUCTURE_WALL &&
+                structure.hits < Memory.wallHit ||
+                structure.structureType == STRUCTURE_RAMPART &&
                 structure.hits < Memory.wallHit)
             });
             console.log('Memory.wallHit = ' + Memory.wallHit);
