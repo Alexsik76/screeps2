@@ -72,7 +72,7 @@ if(Memory.wallHit == undefined){
 }
 let allWall = Game.rooms[Memory.roomName].find(FIND_STRUCTURES, {
     filter: (structure) => (structure.structureType == STRUCTURE_WALL ||
-            structure.structureType == STRUCTURE_WALL) &&
+            structure.structureType == STRUCTURE_RAMPART) &&
             structure.hits < Memory.wallHit});
 //console.log('allWall = ' + allWall);
 if(allWall == '' && Memory.wallHit < 299999000){
