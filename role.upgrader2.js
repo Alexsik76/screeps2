@@ -15,7 +15,7 @@ var roleUpgrader2 = {
 
     run: function(creep) {
       let posInvasion =  new RoomPosition(3,33, 'E12N47');
-      if(!creep.room == Memmory.targetInvasion){
+      if(creep.room.name != Memmory.targetInvasion){
       creep.moveTo(posInvasion);
     }else{
             if(creep.memory.upgrading && creep.carry.energy == 0) {
