@@ -45,7 +45,7 @@ console.log('TragetInvasion = ' + creep.memory.upgradeTarget);
           }
         }
 
-renew(creep);
+
 }
 	}
 };
