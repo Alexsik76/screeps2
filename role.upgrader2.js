@@ -24,8 +24,9 @@ var roleUpgrader2 = {
 	    }
 
 	    if(creep.memory.upgrading) {
-            if(creep.upgradeController(Game.getObjectById('5bbcad8a9099fc012e63769f')) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(Game.getObjectById('5bbcad8a9099fc012e63769f'), {visualizePathStyle: {stroke: '#ffffff'}});
+        let targetToUpgrade = Game.rooms[Memory.targetInvasion].controller;
+            if(creep.upgradeController(targetToUpgrade) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(targetToUpgrade, {visualizePathStyle: {stroke: '#ffffff'}});
             }
         }
         else {
