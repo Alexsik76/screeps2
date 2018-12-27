@@ -1,7 +1,7 @@
 var defendRoom = require('defend');
 function definition(){
 
-
+    Memory.targetInvasion = 'E12N47';
     Memory.roomName = 'E11N47';
 
 
