@@ -270,7 +270,7 @@ console.log('Not energy for spawn harvester');
           if(!closestDamagedStructure){
             roleHarvester2.run(creep);
           }else {
-            roleBuilder.run(creep);
+            roleHarvester.run(creep);
           }
         }
 
