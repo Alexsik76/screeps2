@@ -24,7 +24,7 @@ var roleUpgrader2 = {
 	    }
 	    if(!creep.memory.upgrading && creep.carry.energy == creep.carryCapacity) {
 	        creep.memory.upgrading = true;
-          creep.memory.upgradeTarget = Game.rooms[Memory.targetInvasion].controller;
+          creep.memory.upgradeTarget = Game.rooms[Memory.targetInvasion].controller.id;
 	        creep.say('⚡ upgrade');
 	    }
 
@@ -32,8 +32,8 @@ var roleUpgrader2 = {
 
 
 console.log('TragetInvasion = ' + creep.memory.upgradeTarget);
-            if(creep.upgradeController(creep.memory.upgradeTarget) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(creep.memory.upgradeTarget, {visualizePathStyle: {stroke: '#ffffff'}});
+            if(creep.upgradeController(Game.getObjectById(creep.memory.upgradeTarget)) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(Game.getObjectById(creep.memory.upgradeTarget), {visualizePathStyle: {stroke: '#ffffff'}});
             }
         }
         else {
