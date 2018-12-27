@@ -226,7 +226,7 @@ console.log('Not energy for spawn harvester');
             roleUpgrader.run(creep);
         }
         if(creep.memory.role == 'upgrader2') {
-            roleUpgrader.run(creep);
+            roleUpgrader2.run(creep);
         }
         if(creep.memory.role == 'miner0') {
             roleMiner0.run(creep);
