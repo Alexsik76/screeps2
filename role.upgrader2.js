@@ -14,8 +14,9 @@ var roleUpgrader2 = {
 
 
     run: function(creep) {
-      if(!creep.pos.isNearTo(2, 33, Game.rooms[Memory.targetInvasion])){
-      creep.moveTo(2, 33, Game.rooms[Memory.targetInvasion]);
+      let posInvasion =  new RoomPosition(3,33, 'E12N47');
+      if(!creep.pos.isNearTo(posInvasion)){
+      creep.moveTo(posInvasion);
     }else{
             if(creep.memory.upgrading && creep.carry.energy == 0) {
             creep.memory.upgrading = false;
