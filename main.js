@@ -106,7 +106,7 @@ console.log('Not energy for spawn harvester');
 
     var doctors = _.filter(Game.creeps, (creep) => creep.memory.role == 'doctor');
     console.log('Doctors: ' + doctors.length);
-    if(doctors.length < 1 && Memory.energyAv > 299) {
+    if(doctors.length < 0 && Memory.energyAv > 299) {
       readyToInvasion += 1;
         let newName = 'Doctor' + Game.time;
         console.log('Spawning new Doctor: ' + newName);
