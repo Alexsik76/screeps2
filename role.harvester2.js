@@ -21,6 +21,7 @@ var roleHarvester2 = {
     }
   if(creep.memory.transport) {
     let target = Game.getObjectById(creep.memory.targeten);
+    console.log('+++++' + creep.name, creep.memory.targeten);
     if(creep.transfer(target, RESOURCE_ENERGY) == ERR_FULL){
       creep.memory.transport = false;
     } else {
