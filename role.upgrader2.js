@@ -24,7 +24,9 @@ var roleUpgrader2 = {
 	    }
 
 	    if(creep.memory.upgrading) {
-        let targetToUpgrade = Game.rooms[Memory.targetInvasion].controller;
+
+              let targetToUpgrade = Game.rooms[Memory.targetInvasion].controller;
+              console.log('targetToUpgrade = ' + targetToUpgrade);
             if(creep.upgradeController(targetToUpgrade) == ERR_NOT_IN_RANGE) {
                 creep.moveTo(targetToUpgrade, {visualizePathStyle: {stroke: '#ffffff'}});
             }
