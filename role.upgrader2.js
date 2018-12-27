@@ -32,8 +32,8 @@ var roleUpgrader2 = {
 
 
 console.log('TragetInvasion = ' + creep.memory.upgradeTarget);
-            if(creep.upgradeController(Game.getObjectById(creep.memory.upgradeTarget)) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(Game.getObjectById(creep.memory.upgradeTarget), {visualizePathStyle: {stroke: '#ffffff'}});
+            if(creep.upgradeController(Game.getObjectById('5bbcad9c9099fc012e637824')) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(Game.getObjectById('5bbcad9c9099fc012e637824'), {visualizePathStyle: {stroke: '#ffffff'}});
             }
         }
         else {
