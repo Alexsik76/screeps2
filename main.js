@@ -239,7 +239,7 @@ console.log('Not energy for spawn harvester');
        }
         if(creep.memory.role == 'repairer') {
 
-              roleRepairer.run(creep);
+              roleHarvester2.run(creep);
 
             }
         if(creep.memory.role == 'doctor') {
