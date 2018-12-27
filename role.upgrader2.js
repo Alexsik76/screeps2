@@ -20,15 +20,16 @@ var roleUpgrader2 = {
 	    }
 	    if(!creep.memory.upgrading && creep.carry.energy == creep.carryCapacity) {
 	        creep.memory.upgrading = true;
+          creep.memory.upgradeTarget = Game.rooms[Memory.targetInvasion].controller;
 	        creep.say('⚡ upgrade');
 	    }
 
 	    if(creep.memory.upgrading) {
 
-              let targetToUpgrade = Game.rooms[Memory.targetInvasion].controller;
-              console.log('targetToUpgrade = ' + targetToUpgrade);
-            if(creep.upgradeController(targetToUpgrade) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(targetToUpgrade, {visualizePathStyle: {stroke: '#ffffff'}});
+
+console.log('TragetInvasion = ' + creep.memory.upgradeTarget);
+            if(creep.upgradeController(creep.memory.upgradeTarget) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(creep.memory.upgradeTarget, {visualizePathStyle: {stroke: '#ffffff'}});
             }
         }
         else {
