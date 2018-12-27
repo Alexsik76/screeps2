@@ -96,7 +96,7 @@ console.log('Not energy for spawn harvester');
     var upgraders2 = _.filter(Game.creeps, (creep) => creep.memory.role == 'upgrader2');
     console.log('Upgraders2: ' + upgraders2.length);
 
-    if(upgraders2.length < 0 && Memory.energyAv > 249) {
+    if(upgraders2.length < 1 && Memory.energyAv > 249) {
       readyToInvasion += 1;
         let newName = 'Upgrader2' + Game.time;
         console.log('Spawning new upgrader: ' + newName);
