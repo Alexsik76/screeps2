@@ -1,5 +1,5 @@
 function TargetTransport(creep){
-  if(Memory.energyAv > 749){
+  if(Memory.energyAv < 749){
 var targets = creep.room.find(FIND_STRUCTURES, {
         filter: (structure) => {
             return (structure.structureType == STRUCTURE_EXTENSION ||
