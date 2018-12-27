@@ -183,14 +183,14 @@ console.log('Not energy for spawn harvester');
     Memory.invasion = true;
     }
     if ((attackers.length < 1) || (rattackers.length < 1)){
-    Memory.invasion = false;
+    Memory.invasion = true;
     }
     //Memory.invasion = true;
     console.log('Memory.invasion =' + Memory.invasion);
     console.log('atta = ' + (attackers.length < 1) + (rattackers.length < 1));
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
   console.log('Invaders: ' + invaders.length);
-  if(readyToInvasion < 1  && Memory.readyToInvasion1){
+  if(readyToInvasion < 1  ){
     if(invaders.length < 0){
       let newName = 'Invader' + Game.time;
       console.log('Spawning new invader: ' + newName);
