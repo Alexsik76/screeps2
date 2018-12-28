@@ -10,9 +10,7 @@ var roleHarvester2 = {
     creep.memory.withdraw = true;
     creep.say('withdraw');
   }
-  console.log('creep.memory.targeten = ' + creep.memory.targeten);
-  console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
-  if(creep.carry.energy > 0 && !creep.memory.transport){
+    if(creep.carry.energy > 0 && !creep.memory.transport){
     creep.memory.targeten = TargetTransport4(creep);
     creep.memory.transport = true;
     creep.memory.withdraw = false;

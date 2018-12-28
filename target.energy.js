@@ -20,13 +20,6 @@ function TargetEnergy(creep){
       }
     }
 
-
-
-
-
-          //  if(creep.withdraw(creep.room.storage, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-          //    creep.moveTo(creep.room.storage);
-          //  }
       }
 
 module.exports = TargetEnergy;

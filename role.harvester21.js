@@ -10,13 +10,10 @@ var roleHarvester2 = {
     creep.memory.withdraw = true;
     //creep.say('Ã°Å¸âÆ withdraw');
   }
-  console.log('creep.memory.targeten = ' + creep.memory.targeten);
-  console.log('!creep.memory.targeten = ' + !creep.memory.targeten);
   if(creep.carry.energy > 0 && !creep.memory.transport){
     creep.memory.targeten = TargetTransport4(creep);
     creep.memory.transport = true;
     creep.memory.withdraw = false;
-    //console.log(creep.name, creep.memory.targeten);
     creep.say('🚚 Transport');
     }
   if(creep.memory.transport) {
