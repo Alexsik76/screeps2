@@ -9,10 +9,22 @@ function TargetTransport4(creep){
               }
           });
           if(!target){
+            let towers = creep.room.find(FIND_STRUCTURES, {
+                    filter: (structure) => {
+                    return (structure.structureType == STRUCTURE_TOWER)}
+                  });
+                  if(towers && towers != null){
+                    var summ_towers = 0;
+                    for(var i = 0; i < towers.length; i++){
+                      summ_towers += towers[i].energy;
+                    }
+                    var average_sum = summ_towers / towers.length;
+                  }
+
             target = creep.pos.findClosestByRange(FIND_STRUCTURES, {
                     filter: (structure) => {
                     return (structure.structureType == STRUCTURE_TOWER) &&
-                    structure.energy < structure.energyCapacity;
+                    structure.energy < average_sum;
                     }
                 });
           }
