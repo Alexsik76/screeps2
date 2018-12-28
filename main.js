@@ -264,14 +264,14 @@ console.log('Not energy for spawn harvester');
           }
         }
         if(creep.memory.role == 'builder') {
-          if(closestDamagedStructure == ''){
+          if(targets == 0){
             roleRepairer.run(creep);
           }else {
             roleBuilder.run(creep);
           }
         }
     }
-console.log('closestDamagedStructure == ' + (closestDamagedStructure == null));
+console.log('closestDamagedStructure == ' + targets);
     var rangers = _.filter(Game.creeps, (creep) => creep.memory.role == 'ranger');
     console.log('Rangers: ' + rangers.length);
 
