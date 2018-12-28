@@ -9,9 +9,7 @@
 
 function toSpawnRangers(amount){
 
-        console.log('Spawning '+ amount + ' rangers');
         var rangers = _.filter(Game.creeps, (creep) => (creep.memory.role == 'ranger'));
-        console.log('Rangers: ' + rangers.length);
         if(rangers.length < amount) {
         var newName = 'Ranger' + Game.time;
         console.log('Spawning new ranger: ' + newName);

@@ -47,8 +47,6 @@ if(miners.length < Memory.containers.length && Memory.energyAv > 549) {
 
     if(harvesters.length < 2) {
       readyToInvasion += 1;
-      console.log('Ready To Invasion ' + Memory.readyToInvasion);
-        console.log(Game.spawns.Spawn1.energy);
         if(Memory.energyAv > 500 && Memory.harvesting == false)
         {
         let newName = 'HarvesterBig' + Game.time;
@@ -186,8 +184,7 @@ console.log('Not energy for spawn harvester');
     Memory.invasion = false;
     }
     //Memory.invasion = true;
-    console.log('Memory.invasion =' + Memory.invasion);
-    console.log('atta = ' + (attackers.length < 1) + (rattackers.length < 1));
+
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
   console.log('Invaders: ' + invaders.length);
   if(readyToInvasion < 1  ){

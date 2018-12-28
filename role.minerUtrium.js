@@ -8,7 +8,6 @@
  */
    var roleMinerUtrium = {
 run: function(creep) {
-//console.log('creep.room.extractor = ' + JSON.stringify(creep.room.extractor));
                 creep.moveTo(36,4, {visualizePathStyle: {stroke: '#ffaa00'}});
                 var sources = creep.room.find(FIND_MINERALS);
                 if(Game.getObjectById('5c1fd01db4a2ff073249d0fd').cooldown < 1){

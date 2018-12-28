@@ -17,8 +17,6 @@ var roleRepairer= {
                 structure.structureType == STRUCTURE_RAMPART &&
                 structure.hits < Memory.wallHit)
             });
-            console.log('Memory.wallHit = ' + Memory.wallHit);
-
         if(!closestDamagedStructure){
         creep.memory.repair = false;
       }

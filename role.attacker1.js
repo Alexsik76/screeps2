@@ -30,15 +30,8 @@ var roleAttacker1 = {
                                   });
 }
                 if(enemies == null){
-              //  creep.say('Attack creep');
                 var enemies = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
-//console.log('FIND_HOSTILE_CREEPS' + enemies);
 
-              }
-  //          }
-            //  var pos3333 = enemies;
-
-            //var enemies = creep.pos.findClosestByRange(FIND_HOSTILE_STRUCTURES);
             if(enemies) {
               creep.moveTo(enemies);
                 if(creep.pos.isNearTo(enemies)) {
@@ -50,7 +43,7 @@ var roleAttacker1 = {
               } else {
                 //creep.memory.attack = false;
 
-                
+
                 creep.memory.attack = false;
               }
 
