@@ -274,7 +274,7 @@ console.log('Not energy for spawn harvester');
 
 
     }
-
+console.log('closestDamagedStructure == ' + (closestDamagedStructure == ''));
     var rangers = _.filter(Game.creeps, (creep) => creep.memory.role == 'ranger');
     console.log('Rangers: ' + rangers.length);
 
