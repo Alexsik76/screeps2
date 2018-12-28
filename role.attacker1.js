@@ -66,5 +66,6 @@ var roleAttacker1 = {
     }
 
   }
+}
 };
 module.exports = roleAttacker1;
