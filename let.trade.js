@@ -4,6 +4,7 @@ function letTrade(roomName){
     //Game.market.createOrder(ORDER_SELL, RESOURCE_ENERGY, 0.08, 1000, roomName);
     const amountToBuy = 1000, maxTransferEnergyCost = 800;
     const orders = Game.market.getAllOrders({type: ORDER_BUY, resourceType: RESOURCE_UTRIUM});
+    console.log('Orders: ' + orders);
     const myOrders = Game.market.getAllOrders({roomName: roomName});
 for(let i=0; i<orders.length; i++) {
     const transferEnergyCost = Game.market.calcTransactionCost(
