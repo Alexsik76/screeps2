@@ -24,7 +24,7 @@ function TargetTransport4(creep){
             target = creep.pos.findClosestByRange(FIND_STRUCTURES, {
                     filter: (structure) => {
                     return (structure.structureType == STRUCTURE_TOWER) &&
-                    structure.energy < average_sum;
+                    structure.energy <= average_sum;
                     }
                 });
           }
