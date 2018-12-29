@@ -22,7 +22,7 @@ var roleInvader = {
          if(creep.memory.invade){
 
              var enemies = creep.room.controller;
-           
+             console.log(creep.name, enemies.structureType);
           if(!enemies.my && enemies.owner != 'None') {
               if(creep.attackController(enemies) == ERR_NOT_IN_RANGE) {
                 creep.say('Attack');
