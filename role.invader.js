@@ -28,7 +28,9 @@ var roleInvader = {
                 creep.say('Attack');
                 creep.moveTo(enemies);
               }
-            } else {
+            }
+            console.log('enemies.owner' + enemies.owner);
+            if(enemies.owner != 'None') {
 
                 if(creep.claimController(enemies) == ERR_NOT_IN_RANGE) {
                 creep.say('invade');
