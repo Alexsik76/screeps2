@@ -188,7 +188,7 @@ console.log('Not energy for spawn harvester');
   var invaders = _.filter(Game.creeps, (creep) => creep.memory.role == 'invader');
   console.log('Invaders: ' + invaders.length);
   if(readyToInvasion < 1  ){
-    if(invaders.length < 0){
+    if(invaders.length < 1){
       let newName = 'Invader' + Game.time;
       console.log('Spawning new invader: ' + newName);
   Game.spawns.Spawn1.spawnCreep([WORK,CLAIM,MOVE,MOVE,
