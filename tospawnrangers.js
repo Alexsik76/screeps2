@@ -13,7 +13,9 @@ function toSpawnRangers(amount){
         if(rangers.length < amount) {
         var newName = 'Ranger' + Game.time;
         console.log('Spawning new ranger: ' + newName);
-        Game.spawns['Spawn1'].spawnCreep([TOUGH,TOUGH,TOUGH,TOUGH,MOVE,MOVE,MOVE,TOUGH,TOUGH,TOUGH,TOUGH,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,ATTACK,ATTACK], newName,
+        Game.spawns['Spawn1'].spawnCreep([TOUGH,TOUGH,TOUGH,TOUGH,
+          MOVE,MOVE,MOVE,TOUGH,TOUGH,TOUGH,TOUGH,MOVE,MOVE,MOVE,MOVE,
+          MOVE,MOVE,MOVE,ATTACK,ATTACK], newName,
         {memory: {role: 'ranger'}})
         }
 }
