@@ -10,7 +10,7 @@ var roleInvader = {
         var pos3333 =  new RoomPosition(44, 28, Memory.roomName);
         creep.moveTo(pos3333);
       } else{
-  var pos3333 =  new RoomPosition(22, 22, 'E12N47');
+  var pos3333 =  new RoomPosition(2, 29, 'E12N47');
            if(!creep.pos.isNearTo(pos3333)&&!creep.memory.invade){
            //creep.say('To invade');
            creep.memory.invade = false;
