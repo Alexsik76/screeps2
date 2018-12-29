@@ -168,6 +168,7 @@ console.log('Not energy for spawn harvester');
     var rattackers = _.filter(Game.creeps, (creep) => creep.memory.role == 'rattacker1');
     console.log('RAttackers: ' + rattackers.length);
       if(readyToInvasion < 1  && Memory.readyToInvasion1){
+
       if(rattackers.length < 1){
         let newName = 'RangeAttacker' + Game.time;
         console.log('Spawning new rangeattacker: ' + newName);
