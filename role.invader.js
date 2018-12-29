@@ -35,6 +35,7 @@ var roleInvader = {
                 creep.moveTo(enemies);
               }else{
                 creep.claimController(enemies);
+                creep.say('claim');
               }
               }
 
