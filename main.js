@@ -181,7 +181,7 @@ console.log('Not energy for spawn harvester');
     Memory.invasion = true;
     }
     if ((attackers.length < 1) || (rattackers.length < 1)){
-    Memory.invasion = false;
+    Memory.invasion = true;
     }
     //Memory.invasion = true;
 
