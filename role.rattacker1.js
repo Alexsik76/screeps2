@@ -10,7 +10,7 @@ var roleRAttacker1 = {
         let pos3333 =  new RoomPosition(13, 43, Memory.roomName);
         creep.moveTo(pos3333);
       } else {
-        let pos3333 =  new RoomPosition(20, 2, 'E11N46');
+        let pos3333 =  new RoomPosition(2, 30, 'E12N47');
         if(!creep.pos.isNearTo(pos3333) && !creep.memory.attack){
           creep.say('🛡️ To attack neighbor');
           creep.memory.attack = false;
@@ -54,7 +54,7 @@ var roleRAttacker1 = {
               }
 
 } else {
-  creep.moveTo(new RoomPosition(20, 2, 'E11N46'));
+  creep.moveTo(new RoomPosition(20, 2, 'E12N47'));
 }
 
 
