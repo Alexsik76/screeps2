@@ -122,7 +122,7 @@ console.log('Not energy for spawn harvester');
     }
     var repairers = _.filter(Game.creeps, (creep) => creep.memory.role == 'repairer');
     console.log('Repairers: ' + repairers.length);
-    if(repairers.length < 2 && Memory.energyAv > 249) {
+    if(repairers.length < 3 && Memory.energyAv > 249) {
       readyToInvasion += 1;
         let newName = 'Repairer' + Game.time;
         console.log('Spawning new Repairer: ' + newName);
@@ -271,7 +271,7 @@ console.log('Not energy for spawn harvester');
           }
         }
     }
-console.log('closestDamagedStructure == ' + targets);
+//console.log('closestDamagedStructure == ' + targets);
     var rangers = _.filter(Game.creeps, (creep) => creep.memory.role == 'ranger');
     console.log('Rangers: ' + rangers.length);
 
