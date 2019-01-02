@@ -8,6 +8,7 @@
  */
 var roleMiner0 = {
 run: function(creep) {
+
                 creep.moveTo(9,13, {visualizePathStyle: {stroke: '#ffaa00'}});
                  var sources = creep.room.find(FIND_SOURCES);
                 creep.harvest(sources[1])
