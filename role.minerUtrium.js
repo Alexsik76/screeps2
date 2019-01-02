@@ -12,7 +12,7 @@ run: function(creep) {
                 var sources = creep.room.find(FIND_MINERALS);
                 if(Game.getObjectById('5c1fd01db4a2ff073249d0fd').cooldown < 1){
                   creep.harvest(sources[0])
-                  console.log('Utrium =' + sources[0].resourceType);
+                  console.log('Utrium =' + sources.resourceType);
                 }
 
 
