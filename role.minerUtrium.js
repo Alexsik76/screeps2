@@ -11,10 +11,10 @@ run: function(creep) {
                 creep.moveTo(36,4, {visualizePathStyle: {stroke: '#ffaa00'}});
                 var sources = creep.room.find(FIND_MINERALS);
                 console.log('Utrium =' + sources);
-                if(Game.getObjectById('5c1fd01db4a2ff073249d0fd').cooldown < 1){
-                  creep.harvest(sources[0])
+              //  if(Game.getObjectById('5c1fd01db4a2ff073249d0fd').cooldown < 1){
+                  creep.harvest(sources[0].reso)
 
-                }
+            //  }
 
 
 }
