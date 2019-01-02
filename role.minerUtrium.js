@@ -13,7 +13,7 @@ run: function(creep) {
                 console.log('Utrium =' + sources[0]);
                 if(Game.getObjectById('5c1fd01db4a2ff073249d0fd').cooldown < 1){
                   creep.harvest(sources[0]);
-                  console.log('Utrium2' + creep.harvest(sources));
+                  console.log('Utrium2' + creep.harvest(sources[0]));
 
               }
 
