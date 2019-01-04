@@ -35,7 +35,7 @@ var roleAttacker2 = {
                   } else {
                     console.log('MoveTo' + targetFlag.name);
                     console.log('MoveTo2' + creep.memory.nf);
-                    creep.moveTo(targetFlag);
+                    creep.moveTo(Game.flags[creep.memory.nf]);
                   }
                 }
   }
