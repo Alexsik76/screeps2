@@ -188,7 +188,7 @@ console.log('Not energy for spawn harvester');
       if(attackers2.length < 10){
         let newName = 'AttackerLite' + Game.time;
         console.log('Spawning new attackerLite: ' + newName);
-        Game.spawns.Spawn1.spawnCreep([TOUGH,ATTACK,MOVE,MOVE], newName,{memory: {role: 'attacker2'}});
+        Game.spawns.Spawn1.spawnCreep([TOUGH,MOVE], newName,{memory: {role: 'attacker2'}});
       }
     }
 
