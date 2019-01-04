@@ -33,6 +33,7 @@ var roleAttacker2 = {
                   if(creep.pos.isNearTo(targetFlag)){
                     creep.memory.nf = targetFlag.memory;
                   } else {
+                    console.log('MoveTo' + targetFlag.name);
                     creep.moveTo(targetFlag);
                   }
                 }
