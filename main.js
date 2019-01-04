@@ -185,7 +185,7 @@ console.log('Not energy for spawn harvester');
     console.log('Attackers2: ' + attackers2.length);
  //console.log('Ready To Invasion 2 = ' + readyToInvasion);
     if(readyToInvasion < 1  && Memory.readyToInvasion1){
-      if(attackers.length < 4){
+      if(attackers2.length < 4){
         let newName = 'AttackerLite' + Game.time;
         console.log('Spawning new attackerLite: ' + newName);
         Game.spawns.Spawn1.spawnCreep([TOUGH,ATTACK,MOVE,MOVE], newName,{memory: {role: 'attacker2'}});
