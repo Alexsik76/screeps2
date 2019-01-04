@@ -12,6 +12,7 @@ var roleRepairer = require('role.repairer');
 var ToSpawnRangers = require('tospawnrangers');
 var defendRoom = require('defend');
 var roleAttacker1 = require('role.attacker1');
+var roleAttacker2 = require('role.attacker2');
 var roleRAttacker1 = require('role.rattacker1');
 var definition = require('definition');
 var roleHarvester2 = require('role.harvester2');
@@ -180,6 +181,17 @@ console.log('Not energy for spawn harvester');
           ATTACK,RANGED_ATTACK,ATTACK,ATTACK,ATTACK,RANGED_ATTACK,RANGED_ATTACK], newName,{memory: {role: 'attacker1'}});
       }
     }
+    var attackers2 = _.filter(Game.creeps, (creep) => creep.memory.role == 'attacker2');
+    console.log('Attackers2: ' + attackers2.length);
+ //console.log('Ready To Invasion 2 = ' + readyToInvasion);
+    if(readyToInvasion < 1  && Memory.readyToInvasion1){
+      if(attackers.length < 4){
+        let newName = 'AttackerLite' + Game.time;
+        console.log('Spawning new attackerLite: ' + newName);
+        Game.spawns.Spawn1.spawnCreep([TOUGH,ATTACK,MOVE,MOVE], newName,{memory: {role: 'attacker2'}});
+      }
+    }
+
 
     var rattackers = _.filter(Game.creeps, (creep) => creep.memory.role == 'rattacker1');
     console.log('RAttackers: ' + rattackers.length);
@@ -269,6 +281,13 @@ console.log('Not energy for spawn harvester');
         if(creep.memory.role == 'attacker1') {
           if(!defendRoom(Memory.roomName)){
             roleAttacker1.run(creep);
+          } else {
+            roleRanger.run(creep);
+          }
+        }
+        if(creep.memory.role == 'attacker2') {
+          if(!defendRoom(Memory.roomName)){
+            roleAttacker2.run(creep);
           } else {
             roleRanger.run(creep);
           }
