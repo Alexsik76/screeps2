@@ -22,6 +22,22 @@ var letTrade = require('let.trade');
 
 module.exports.loop = function () {
 definition();
+
+if(flagBase == undefined){
+    var flagBase = [];
+   for(var name1 in Game.flags){
+      console.log('flag1' + Game.flags[name1].name);
+       flagBase.push(Game.flags[name1].name);
+   }
+    flagBase.sort();
+}
+
+console.log('flag' + flagBase);
+for(let i = 0; i < flagBase.length; i ++){
+    let nameFlag = flagBase[i];
+    console.log(nameFlag);
+    Game.flags[nameFlag].memory = flagBase[i + 1];
+}
 letTrade(Memory.roomName);
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
