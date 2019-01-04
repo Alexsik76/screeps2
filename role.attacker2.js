@@ -29,7 +29,7 @@ var roleAttacker2 = {
                 } else {
 
                   let targetFlag = Game.flags[creep.memory.nf];
-                  console.log(targetFlag);
+                  console.log(targetFlag, targetFlag.memory);
                   if(creep.pos.isNearTo(targetFlag)){
                     creep.memory.nf = targetFlag.memory;
                   } else {
