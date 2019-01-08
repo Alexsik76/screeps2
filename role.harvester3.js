@@ -12,7 +12,7 @@ var roleHarvester3 = {
 
   if(creep.carry.U == creep.carryCapacity && !creep.memory.transport){
 
-    if(creep.room.terminal.store[RESOURCE_ENERGY] < 2000){
+    if(creep.room.terminal.store[RESOURCE_ENERGY] < 140000){
       creep.memory.targetres = creep.room.terminal.id
     } else {
       creep.memory.targetres = creep.room.storage.id;
@@ -34,7 +34,8 @@ var roleHarvester3 = {
   }
 
   if(creep.memory.harvest) {
-    let target1 = Game.getObjectById('5c1fdffde5f5aa183a685bb7');
+    let target1 = creep.room.storage;
+    //let target1 = Game.getObjectById('5c1fdffde5f5aa183a685bb7');
     if(creep.withdraw(target1, RESOURCE_UTRIUM) == ERR_NOT_IN_RANGE) {
       creep.moveTo(target1);
     }
