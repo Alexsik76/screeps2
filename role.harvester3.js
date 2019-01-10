@@ -34,8 +34,8 @@ var roleHarvester3 = {
   }
 
   if(creep.memory.harvest) {
-    let target1 = creep.room.storage;
-    //let target1 = Game.getObjectById('5c1fdffde5f5aa183a685bb7');
+    //let target1 = creep.room.storage;
+    let target1 = Game.getObjectById('5c1fdffde5f5aa183a685bb7');
     if(creep.withdraw(target1, RESOURCE_UTRIUM) == ERR_NOT_IN_RANGE) {
       creep.moveTo(target1);
     }
