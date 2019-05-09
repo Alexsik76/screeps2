@@ -1,8 +1,8 @@
 var defendRoom = require('defend');
 function definition(){
 
-    Memory.targetInvasion = 'E12N47';
-    Memory.roomName = 'E11N47';
+   // Memory.targetInvasion = 'E12N47';
+    Memory.roomName = 'W16N9';
   Memory.energyAv = Game.rooms[Memory.roomName].energyAvailable;
   if(!Memory.structuresAll){
     Memory.structuresAll = Game.rooms[Memory.roomName].find(FIND_STRUCTURES).length;
