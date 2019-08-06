@@ -40,8 +40,10 @@ function definition(){
 
   let cont0 = Game.getObjectById(Memory.containersId[0]);
   let cont1 = Game.getObjectById(Memory.containersId[1]);
+   if( cont0 != null & cont1 != null) { 
 Memory.containerId = cont0.store[RESOURCE_ENERGY] < cont1.store[RESOURCE_ENERGY] ? cont1.id : cont0.id;
-  if(Memory.containersId.length == 0){
+   }
+      if(Memory.containersId.length == 0){
     Memory.harvesting = true;
   } else{
       Memory.harvesting = false;
