@@ -39,7 +39,7 @@ for(let i = 0; i < flagBase.length; i ++){
     console.log(nameFlag);
     Game.flags[nameFlag].memory = flagBase[i + 1];
 }
-letTrade(Memory.roomName);
+//letTrade(Memory.roomName);
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
             delete Memory.creeps[name];
