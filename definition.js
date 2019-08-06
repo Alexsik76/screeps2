@@ -53,7 +53,7 @@ Memory.containerId = cont0.store[RESOURCE_ENERGY] < cont1.store[RESOURCE_ENERGY]
           Memory.harvesting = false;
       }
     }
-   console.log('Storage =' Game.rooms[Memory.roomName].storage);
+   console.log('Storage =' + Game.rooms[Memory.roomName].storage);
     if(Game.rooms[Memory.roomName].storage != null && Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY] > 400000
       && !defendRoom(Memory.roomName) && Memory.energyAv > 600){
       Memory.readyToInvasion1 = true;
