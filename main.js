@@ -91,7 +91,7 @@ console.log('Not energy for spawn harvester');
         }
         var harvesters3 = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester3');
         console.log('Harvesters3: ' + harvesters3.length);
-            if(harvesters3.length < 1 && Memory.energyAv > 199) {
+            if(harvesters3.length < 0 && Memory.energyAv > 199) {
               readyToInvasion += 1;
               let newName = 'HarvesterUtrium' + Game.time;
               console.log('Spawning new harvesterUtrium: ' + newName);
@@ -130,7 +130,7 @@ console.log('Not energy for spawn harvester');
     }
     var minersUtrium = _.filter(Game.creeps, (creep) => creep.memory.role == 'minerUtrium');
     console.log(' MinersUtrium ' +  minersUtrium.length);
-    if( minersUtrium.length < 1 && Memory.energyAv > 299) {
+    if( minersUtrium.length < 0 && Memory.energyAv > 299) {
       readyToInvasion += 1;
         let newName = 'MinerUtrium' + Game.time;
         console.log('Spawning new  MinerUtrium: ' + newName);
@@ -139,7 +139,7 @@ console.log('Not energy for spawn harvester');
     }
     var repairers = _.filter(Game.creeps, (creep) => creep.memory.role == 'repairer');
     console.log('Repairers: ' + repairers.length);
-    if(repairers.length < 3 && Memory.energyAv > 249) {
+    if(repairers.length < 0 && Memory.energyAv > 249) {
       readyToInvasion += 1;
         let newName = 'Repairer' + Game.time;
         console.log('Spawning new Repairer: ' + newName);
