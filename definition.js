@@ -55,13 +55,16 @@ Memory.containerId = cont0.store[RESOURCE_ENERGY] < cont1.store[RESOURCE_ENERGY]
     }
    console.log('Storage =' + Game.rooms[Memory.roomName].storage);
    //typeof(some_variable) != 'undefined' && some_variable != null
-    if(typeof(Game.rooms[Memory.roomName].storage) != 'undefined'  && Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY] > 400000
+   if(typeof(Game.rooms[Memory.roomName].storage) != 'undefined'){
+      if(typeof(Game.rooms[Memory.roomName].storage) != 'undefined'  && Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY] > 400000
       && !defendRoom(Memory.roomName) && Memory.energyAv > 600){
       Memory.readyToInvasion1 = true;
-    } if(Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY] < 100000 ||
-    defendRoom(Memory.roomName)) {
+      } 
+      if(Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY] < 100000 ||
+      defendRoom(Memory.roomName)) {
       Memory.readyToInvasion1 = false;
-    }
+      }
+   }
 
 if(Memory.wallHit == undefined){
   Memory.wallHit = 1000;
