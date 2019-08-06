@@ -40,7 +40,7 @@ function definition(){
 
   let cont0 = Game.getObjectById(Memory.containersId[0]);
   let cont1 = Game.getObjectById(Memory.containersId[1]);
-   if( cont0 != null & cont1 != null) { 
+   if( cont0 != null || cont1 != null) { 
 Memory.containerId = cont0.store[RESOURCE_ENERGY] < cont1.store[RESOURCE_ENERGY] ? cont1.id : cont0.id;
    }
       if(Memory.containersId.length == 0){
@@ -53,7 +53,7 @@ Memory.containerId = cont0.store[RESOURCE_ENERGY] < cont1.store[RESOURCE_ENERGY]
           Memory.harvesting = false;
       }
     }
-    if(Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY] > 400000
+    if(Game.rooms[Memory.roomName].storage.store != null && Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY] > 400000
       && !defendRoom(Memory.roomName) && Memory.energyAv > 600){
       Memory.readyToInvasion1 = true;
     } if(Game.rooms[Memory.roomName].storage.store[RESOURCE_ENERGY] < 100000 ||
